@@ -1,0 +1,35 @@
+{"sections":[
+ {"id":"1","title":"Fundamentals of gen AI","weight":30,"subs":[
+  {"id":"1.1","title":"Core gen AI concepts and use cases"},
+  {"id":"1.2","title":"Data types, quality and accessibility"},
+  {"id":"1.3","title":"Layers of the gen AI landscape"},
+  {"id":"1.4","title":"Google's foundation models (Gemini, Gemma, Imagen, Veo)"}]},
+ {"id":"2","title":"Google Cloud's gen AI offerings","weight":35,"subs":[
+  {"id":"2.1","title":"Google Cloud's strengths in gen AI"},
+  {"id":"2.2","title":"Prebuilt offerings for AI-powered work (Gemini app, Gemini Enterprise, Workspace)"},
+  {"id":"2.3","title":"Customer experience (Agent Search, Customer Engagement Suite)"},
+  {"id":"2.4","title":"Building with AI (Agent Platform, RAG offerings, custom agents)"},
+  {"id":"2.5","title":"Agent tooling and AI Studio vs Agent Studio"}]},
+ {"id":"3","title":"Techniques to improve model output","weight":20,"subs":[
+  {"id":"3.1","title":"Overcoming model limitations, monitoring and evaluation"},
+  {"id":"3.2","title":"Prompt engineering techniques"},
+  {"id":"3.3","title":"Grounding, RAG and sampling parameters"}]},
+ {"id":"4","title":"Business strategies for a gen AI solution","weight":15,"subs":[
+  {"id":"4.1","title":"Implementing a transformational gen AI solution"},
+  {"id":"4.2","title":"Secure AI"},
+  {"id":"4.3","title":"Responsible AI"}]}],
+"aliases":[
+ ["Gemini Enterprise Agent Platform (Agent Platform)","Agent Platform","Formerly Vertex AI"],
+ ["Agent Search","Agent Search on Gemini Enterprise Agent Platform","Formerly Vertex AI Search"],
+ ["Agent Studio","Agent Studio","Formerly Vertex AI Studio"],
+ ["Google Workspace with Gemini","Gemini for Google Workspace","Same product, two names"],
+ ["Gemini Enterprise for CX","Customer Engagement Suite",""],
+ ["CX agents / CX Agent Studio","Conversational Agents",""],
+ ["CX Insights","Conversational Insights",""],
+ ["Agent Assist","Agent Assist","Unchanged"],
+ ["CCaaS","Google Cloud Contact Center as a Service",""],
+ ["Cloud Run functions","Cloud Functions","Current product name: Cloud Run functions"],
+ ["Nano Banana (image generation)","Imagen","Exam names Imagen as the image model"],
+ ["Gemini Notebook (Plus / Enterprise)","Gemini Notebook API (in Gemini Enterprise)","Earlier course quizzes say NotebookLM"],
+ ["Data Catalog","(not in exam guide)","Discontinued 1 June 2026; now Knowledge Catalog"],
+ ["Hypercomputer","hypercomputer","Plus TPUs, GPUs, data centres"]]}

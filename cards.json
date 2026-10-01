@@ -2535,8 +2535,8 @@
 "tags": [
 "workspace"
 ],
-"q": "Exam name vs course name for Gemini in Gmail, Docs, Sheets, Meet, Slides?",
-"a": "Exam guide: 'Gemini for Google Workspace'. Course and Google's current name: 'Google Workspace with Gemini'. Same product — recognise both.",
+"q": "What is the current name for Gemini built into Gmail, Docs, Sheets, Meet and Slides?",
+"a": "Google Workspace with Gemini.",
 "id": "c4-002",
 "x": "2.2"
 },
@@ -3640,7 +3640,7 @@
 "gcloud"
 ],
 "q": "Serverless functions acting as agent tools (call APIs, calculations), auto-scaling — which service?",
-"a": "Cloud Functions (exam guide name; current product name: Cloud Run functions).",
+"a": "Cloud Run functions.",
 "id": "c5-045",
 "x": "2.5"
 },
@@ -3774,7 +3774,7 @@
 "tags": [
 "gcloud"
 ],
-"q": "Cloud Functions (Cloud Run functions) vs Cloud Run for deploying agent apps?",
+"q": "Cloud Run functions vs Cloud Run for deploying agent apps?",
 "a": "Functions: small event-triggered code, no servers (e.g. caption uploaded images). Cloud Run: containerised apps needing specific software/config (e.g. chatbot web app).",
 "id": "c5-057",
 "x": "2.4"
@@ -4020,8 +4020,8 @@
 "tags": [
 "cx"
 ],
-"q": "Components of Google's Customer Engagement Suite (exam names) and their course names?",
-"a": "Conversational Agents (course: CX agents built in CX Agent Studio) · Agent Assist · Conversational Insights (course: CX Insights) · Google Cloud Contact Center as a Service (CCaaS). Course umbrella name: Gemini Enterprise for CX.",
+"q": "Components of Gemini Enterprise for CX?",
+"a": "CX agents (built in CX Agent Studio) · Agent Assist (for human agents) · CX Insights (conversation analytics) · all on Contact Center as a Service (CCaaS).",
 "id": "c5-079",
 "x": "2.3"
 },
@@ -4054,7 +4054,7 @@
 "cx"
 ],
 "q": "Which tool analyses sentiment, entities and topics across conversations and scores interactions?",
-"a": "Conversational Insights (exam name; course: CX Insights).",
+"a": "CX Insights.",
 "id": "c5-082",
 "x": "2.3"
 },
@@ -4065,7 +4065,7 @@
 "cx"
 ],
 "q": "Which component provides omnichannel support, CRM integration and agent routing?",
-"a": "Google Cloud Contact Center as a Service (CCaaS).",
+"a": "Contact Center as a Service (CCaaS).",
 "id": "c5-083",
 "x": "2.3"
 },
@@ -4591,8 +4591,8 @@
 "cx",
 "exam"
 ],
-"q": "A company wants a virtual agent that handles customer chats and takes actions like refunds. Which Customer Engagement Suite component?",
-"a": "Conversational Agents (course: CX agents built in CX Agent Studio).",
+"q": "A company wants a virtual agent that handles customer chats and takes actions like refunds. Which Gemini Enterprise for CX component?",
+"a": "CX agents, built in CX Agent Studio.",
 "id": "e-025"
 },
 {
@@ -4604,7 +4604,7 @@
 "exam"
 ],
 "q": "A contact-centre manager wants sentiment and topic analysis across all calls. Which component?",
-"a": "Conversational Insights (course: CX Insights).",
+"a": "CX Insights.",
 "id": "e-026"
 },
 {
@@ -4615,8 +4615,8 @@
 "cx",
 "exam"
 ],
-"q": "Course name ↔ exam name for customer engagement products?",
-"a": "Gemini Enterprise for CX ↔ Customer Engagement Suite · CX agents / CX Agent Studio ↔ Conversational Agents · CX Insights ↔ Conversational Insights · Agent Assist = Agent Assist · CCaaS = Google Cloud Contact Center as a Service.",
+"q": "Customer-engagement products: current names and the names the exam guide uses?",
+"a": "Gemini Enterprise for CX (exam: Customer Engagement Suite) · CX agents / CX Agent Studio (exam: Conversational Agents) · CX Insights (exam: Conversational Insights) · Agent Assist (same) · CCaaS (exam: Google Cloud Contact Center as a Service).",
 "id": "e-027"
 },
 {
@@ -4627,7 +4627,7 @@
 "enterprise",
 "exam"
 ],
-"q": "Gemini Enterprise capabilities named in the exam guide?",
+"q": "Three Gemini Enterprise capabilities named in the exam guide?",
 "a": "Gemini Notebook API · multimodal search · custom agent capabilities.",
 "id": "e-028"
 },
@@ -4776,5 +4776,125 @@
 "q": "Caveat on chain-of-thought 'explainability'?",
 "a": "The course lists explainability as a CoT benefit, and the exam may too. But visible reasoning steps are not a guaranteed account of how the model actually reached its answer.",
 "id": "e-040"
+},
+{
+"id": "n-001",
+"l": "1.3",
+"x": "2.4",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "What is Vertex AI called now?",
+"a": "Gemini Enterprise Agent Platform (Agent Platform)."
+},
+{
+"id": "n-002",
+"l": "5.13",
+"x": "2.3",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "What is Vertex AI Search called now?",
+"a": "Agent Search (on Gemini Enterprise Agent Platform)."
+},
+{
+"id": "n-003",
+"l": "5.4",
+"x": "2.5",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "What is Vertex AI Studio called now?",
+"a": "Agent Studio."
+},
+{
+"id": "n-004",
+"l": "4.10",
+"x": "2.2",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "A course quiz mentions NotebookLM Enterprise. What is the current name?",
+"a": "Gemini Notebook Enterprise."
+},
+{
+"id": "n-005",
+"l": "5.15",
+"x": "2.3",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "The exam guide says 'Customer Engagement Suite'. What is the current product name?",
+"a": "Gemini Enterprise for CX."
+},
+{
+"id": "n-006",
+"l": "5.15",
+"x": "2.3",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "The exam guide says 'Conversational Agents'. What is the current name?",
+"a": "CX agents, built in CX Agent Studio."
+},
+{
+"id": "n-007",
+"l": "5.15",
+"x": "2.3",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "The exam guide says 'Conversational Insights'. What is the current name?",
+"a": "CX Insights."
+},
+{
+"id": "n-008",
+"l": "5.9",
+"x": "2.5",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "The exam guide says 'Cloud Functions'. What is the current name?",
+"a": "Cloud Run functions."
+},
+{
+"id": "n-009",
+"l": "4.2",
+"x": "2.2",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "The exam guide says 'Gemini for Google Workspace'. What is the current name?",
+"a": "Google Workspace with Gemini."
+},
+{
+"id": "n-010",
+"l": "5.18",
+"x": "2.2",
+"t": "trap",
+"tags": [
+"names",
+"exam"
+],
+"q": "What did Google Agentspace become?",
+"a": "The Gemini Enterprise app."
 }
 ]

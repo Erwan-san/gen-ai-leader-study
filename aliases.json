@@ -1,0 +1,18 @@
+[
+ {"cur":"Gemini Enterprise Agent Platform","short":"Agent Platform","match":["Agent Platform"],"old":[["Vertex AI","older docs, course quizzes"]]},
+ {"cur":"Agent Search","match":["Agent Search","Agent Platform Search"],"old":[["Vertex AI Search","older docs, course quizzes"]]},
+ {"cur":"Agent Studio","match":["Agent Studio"],"old":[["Vertex AI Studio","older docs"]],"not":["CX Agent Studio","Customer Experience Agent Studio"]},
+ {"cur":"Agent Platform AutoML","match":["AutoML"],"old":[["Vertex AI AutoML","older docs"]]},
+ {"cur":"Agent Platform Pipelines","match":["Pipelines"],"old":[["Vertex AI Pipelines","older docs"]]},
+ {"cur":"Agent Platform Feature Store","match":["Feature Store"],"old":[["Vertex AI Feature Store","older docs"]]},
+ {"cur":"Google Workspace with Gemini","match":["Google Workspace with Gemini","Workspace with Gemini"],"old":[["Gemini for Google Workspace","exam guide, older docs"]]},
+ {"cur":"Gemini Notebook","match":["Gemini Notebook"],"old":[["NotebookLM","course quizzes, older docs"],["NotebookLM Enterprise / Business","course quizzes"]]},
+ {"cur":"Gemini Enterprise app","match":["Gemini Enterprise app"],"old":[["Google Agentspace","older docs"]]},
+ {"cur":"Gemini Enterprise for CX","match":["Gemini Enterprise for CX","Gemini Enterprise for Customer Experience"],"old":[["Customer Engagement Suite","exam guide"]]},
+ {"cur":"CX agents (CX Agent Studio)","match":["CX agent","CX Agent Studio","Customer Experience Agent Studio","Agentic Tax Assistant"],"old":[["Conversational Agents","exam guide"],["Dialogflow CX","older docs"]]},
+ {"cur":"CX Insights","match":["CX Insights","Customer Experience Insights"],"old":[["Conversational Insights","exam guide"]]},
+ {"cur":"Contact Center as a Service (CCaaS)","match":["CCaaS","Contact Center as a Service"],"old":[["Google Cloud Contact Center as a Service","exam guide (same name, longer form)"]]},
+ {"cur":"Cloud Run functions","match":["Cloud Run functions"],"old":[["Cloud Functions","exam guide, older docs"]]},
+ {"cur":"Knowledge Catalog","match":["Data Catalog","Knowledge Catalog"],"old":[["Data Catalog","course (discontinued 1 June 2026)"],["Dataplex Universal Catalog","older docs"]]},
+ {"cur":"Nano Banana (Gemini image generation)","match":["Nano Banana"],"old":[["Imagen","exam guide names Imagen as the image model (a separate model, not a rename)"]]}
+]

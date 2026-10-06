@@ -1,27 +1,5 @@
 [
 {
-"l": "1.1",
-"t": "fact",
-"tags": [
-"exam"
-],
-"q": "Does the Google Cloud Generative AI Leader certification require technical experience?",
-"a": "No. It targets all roles and backgrounds; no technical experience required.",
-"id": "c1-001",
-"x": "1.1"
-},
-{
-"l": "1.1",
-"t": "list",
-"tags": [
-"exam"
-],
-"q": "List the 5 courses of the Gen AI Leader path, in order.",
-"a": "1 Beyond the Chatbot · 2 Unlock Foundational Concepts · 3 Navigate the Landscape · 4 Gen AI Apps: Transform Your Work · 5 Gen AI Agents: Transform Your Organization",
-"id": "c1-002",
-"x": "1.1"
-},
-{
 "l": "1.2",
 "t": "def",
 "tags": [
@@ -119,7 +97,7 @@
 "q": "Which tool does the course cite for creating video tutorials for customers?",
 "a": "Google Vids.",
 "id": "c1-011",
-"x": "1.1"
+"x": "2.2"
 },
 {
 "l": "1.2",
@@ -130,7 +108,7 @@
 "q": "Which product gives employees agents combining Gemini reasoning, Google-quality search and enterprise data wherever it's hosted?",
 "a": "Gemini Enterprise.",
 "id": "c1-012",
-"x": "1.1"
+"x": "2.2"
 },
 {
 "l": "1.2",
@@ -141,7 +119,7 @@
 "q": "Personalised streaming recommendations to reduce churn — which Google Cloud product does the course name?",
 "a": "Agent Search.",
 "id": "c1-013",
-"x": "1.1"
+"x": "2.3"
 },
 {
 "l": "1.2",
@@ -222,7 +200,7 @@
 "q": "Automotive virtual assistant: which product understood the driver, and which found the answer?",
 "a": "Gemini understood the questions; Agent Search retrieved the most relevant answer from manuals, FAQs, help articles, videos, guides.",
 "id": "c1-020",
-"x": "2.4"
+"x": "2.3"
 },
 {
 "l": "1.3",
@@ -233,7 +211,7 @@
 "q": "3 results of the automotive virtual assistant use case?",
 "a": "Reduced support costs · improved efficiency · enhanced accessibility.",
 "id": "c1-021",
-"x": "2.4"
+"x": "2.3"
 },
 {
 "l": "1.3",
@@ -241,8 +219,8 @@
 "tags": [
 "platform"
 ],
-"q": "One-liner: what is Agent Platform the key to?",
-"a": "Creating and deploying custom gen AI solutions for your business.",
+"q": "Which Google Cloud platform is the key to creating and deploying custom gen AI solutions for your business?",
+"a": "Gemini Enterprise Agent Platform (Agent Platform).",
 "id": "c1-022",
 "x": "2.4"
 },
@@ -308,7 +286,7 @@
 "models"
 ],
 "q": "Nano Banana is trained primarily on what, for what?",
-"a": "Images + text descriptions; generates and edits images from text. Course name for Gemini's native image generation/editing. Exam guide names Imagen as the image model — learn both.",
+"a": "Mainly images + text descriptions; text-to-image generation, image editing, understanding image content. The exam guide names Imagen as the image model (a separate model, not an older name for Nano Banana).",
 "id": "c1-028",
 "x": "1.4"
 },
@@ -325,24 +303,13 @@
 },
 {
 "l": "1.5",
-"t": "number",
-"tags": [
-"usecase"
-],
-"q": "Morrisons Product Finder: usage over Easter 2025?",
-"a": "~50,000 hits per day.",
-"id": "c1-030",
-"x": "2.4"
-},
-{
-"l": "1.5",
 "t": "scenario",
 "tags": [
 "usecase",
 "products"
 ],
 "q": "Morrisons Product Finder: which 3 Google components and how did it work?",
-"a": "BigQuery (store product locations) + Vertex AI/Agent Platform + Gemini, which translates the shopper's query into product and location IDs.",
+"a": "BigQuery (product and location data per store) + Agent Platform (formerly Vertex AI) + Gemini models. Gemini and Agent Platform translate the shopper's free-text query into product and location IDs, then the location is looked up in BigQuery.",
 "id": "c1-031",
 "x": "2.4"
 },
@@ -400,28 +367,6 @@
 "a": "An audio file (the call recording) plus the request.",
 "id": "c1-036",
 "x": "3.2"
-},
-{
-"l": "1.8",
-"t": "fact",
-"tags": [
-"strategy"
-],
-"q": "Google's mission statement (as quoted in the course)?",
-"a": "Organize the world's information and make it universally accessible and useful.",
-"id": "c1-037",
-"x": "2.1"
-},
-{
-"l": "1.8",
-"t": "number",
-"tags": [
-"strategy"
-],
-"q": "When did Google launch Google Cloud?",
-"a": "2008.",
-"id": "c1-038",
-"x": "2.1"
 },
 {
 "l": "1.8",
@@ -498,7 +443,7 @@
 "q": "3 elements of the most successful gen AI implementations?",
 "a": "Clear vision · focus on impactful use cases · tracking results.",
 "id": "c1-045",
-"x": "2.1"
+"x": "4.1"
 },
 {
 "l": "1.9",
@@ -585,8 +530,8 @@
 "security",
 "products"
 ],
-"q": "Which 3 enterprise tools support data governance in the strategy lesson, and what does each do?",
-"a": "Cloud Data Loss Prevention (discover/classify/de-identify data) · Cloud Key Management Service (encryption keys) · Google SecOps (detect/respond to threats).",
+"q": "Which 3 Google Cloud tools support data governance in a gen AI strategy, and what does each do?",
+"a": "Google Cloud Data Loss Prevention (discover, classify, de-identify data) · Cloud Key Management Service (encryption keys) · Google SecOps (detect and respond to threats).",
 "id": "c1-053",
 "x": "4.2"
 },
@@ -608,19 +553,8 @@
 "strategy"
 ],
 "q": "What is the creative matrix?",
-"a": "A brainstorming method: axis 1 = gen AI options (product/modality), axis 2 = business items (personas/workflows/goals); sticky-note ideas at intersections, then rate impact vs effort.",
+"a": "A brainstorming method: axis 1 = gen AI options (by product, modality…), axis 2 = business items (personas, workflows, strategic goals); sticky-note ideas at each intersection, then score each for impact and feasibility (work to build).",
 "id": "c1-055",
-"x": "4.1"
-},
-{
-"l": "1.10",
-"t": "list",
-"tags": [
-"strategy"
-],
-"q": "After filling the creative matrix, what 2 dimensions do you evaluate ideas on?",
-"a": "Impact and feasibility (how much work to build).",
-"id": "c1-056",
 "x": "4.1"
 },
 {
@@ -681,17 +615,6 @@
 },
 {
 "l": "1.12",
-"t": "number",
-"tags": [
-"usecase"
-],
-"q": "Warner Bros. Discovery Caption AI results?",
-"a": "~50% reduction in overall costs; ~80% reduction in time to caption vs manual.",
-"id": "c1-062",
-"x": "3.1"
-},
-{
-"l": "1.12",
 "t": "scenario",
 "tags": [
 "usecase",
@@ -708,21 +631,10 @@
 "tags": [
 "platform"
 ],
-"q": "What platform property did WBD value in Vertex AI / Agent Platform?",
-"a": "It is model-agnostic — lets them pick the best model per use case beyond Google's own.",
+"q": "Which Agent Platform (formerly Vertex AI) property let Warner Bros. Discovery pick the best model for each use case?",
+"a": "It is model-agnostic: beyond Google's own models, you can experiment to find the best model per use case.",
 "id": "c1-064",
-"x": "3.1"
-},
-{
-"l": "2.1",
-"t": "list",
-"tags": [
-"fundamentals"
-],
-"q": "Two developments (around 2022) behind the gen AI explosion?",
-"a": "LLMs became far more capable · computing power for training/deploying became widely available.",
-"id": "c2-001",
-"x": "1.1"
+"x": "2.1"
 },
 {
 "l": "2.2",
@@ -731,7 +643,7 @@
 "fundamentals"
 ],
 "q": "Define AI, ML and gen AI in one line each.",
-"a": "AI: broad field of machines doing tasks needing human intelligence. ML: subset of AI where machines learn from data. Gen AI: application/subset that creates new content.",
+"a": "AI: broad field of machines doing tasks needing human intelligence. ML: subset of AI where machines learn from data without explicit programming, improving over time. Gen AI: application/subset that creates new content.",
 "id": "c2-002",
 "x": "1.1"
 },
@@ -1047,7 +959,7 @@
 "data"
 ],
 "q": "Which tool does the course name for discovering datasets across the organisation (governance)? What is it called now?",
-"a": "Course: Data Catalog. Note: Data Catalog was discontinued on 1 June 2026, replaced by Knowledge Catalog (formerly Dataplex Universal Catalog). Not named in the exam guide.",
+"a": "Course: Data Catalog (governance, dataset discovery). Discontinued 1 June 2026; now Knowledge Catalog (formerly Dataplex Universal Catalog). Neither is named in the exam guide.",
 "id": "c2-030",
 "x": "1.2"
 },
@@ -1073,7 +985,7 @@
 "q": "Which Agent Platform tool manages the features a model uses?",
 "a": "Agent Platform Feature Store.",
 "id": "c2-032",
-"x": "1.1"
+"x": "2.4"
 },
 {
 "l": "2.6",
@@ -1085,7 +997,7 @@
 "q": "Which Agent Platform tool automates ML tasks/workflows?",
 "a": "Agent Platform Pipelines.",
 "id": "c2-033",
-"x": "1.1"
+"x": "2.4"
 },
 {
 "l": "2.6",
@@ -1094,7 +1006,7 @@
 "platform"
 ],
 "q": "Model management activities listed in the lifecycle?",
-"a": "Versioning · performance tracking · drift monitoring · feature management (Feature Store) · storing models · automation (Pipelines). Course says 'store models in Model Garden'; precise: Model Registry manages your model versions; Model Garden is for discovering and deploying available models.",
+"a": "Versioning · performance tracking · drift monitoring · feature management (Feature Store) · model storage (course says Model Garden; precisely Model Registry) · automation (Pipelines).",
 "id": "c2-034",
 "x": "1.1"
 },
@@ -1166,17 +1078,6 @@
 "x": "1.1"
 },
 {
-"l": "2.7",
-"t": "def",
-"tags": [
-"fundamentals"
-],
-"q": "Define ML as in the definitions quiz.",
-"a": "A subset of AI that lets machines learn from data without explicit programming, improving over time.",
-"id": "c2-041",
-"x": "1.1"
-},
-{
 "l": "2.8",
 "t": "list",
 "tags": [
@@ -1228,7 +1129,7 @@
 "models"
 ],
 "q": "Imagen vs Veo (exam guide's named models)?",
-"a": "Imagen: text-to-image diffusion model (high-quality images from text, editing). Veo: video generation from text or images. The course also mentions Nano Banana for images; the exam guide names Imagen.",
+"a": "Imagen: text-to-image diffusion model (high-quality images from text). Veo: video generation from text or still images.",
 "id": "c2-046",
 "x": "1.4"
 },
@@ -1242,7 +1143,7 @@
 "q": "Which model sources can you access via Agent Platform?",
 "a": "Google models — exam guide lists Gemini, Gemma, Imagen, Veo (course also shows Nano Banana) — plus proprietary third-party models and openly available models.",
 "id": "c2-047",
-"x": "1.1"
+"x": "2.4"
 },
 {
 "l": "2.8",
@@ -1405,19 +1306,6 @@
 "l": "2.10",
 "t": "scenario",
 "tags": [
-"tuning",
-"rag",
-"prompting"
-],
-"q": "You need answers based on today's internal policy documents. Prompting, fine-tuning or RAG?",
-"a": "RAG (grounding in up-to-date external knowledge).",
-"id": "c2-062",
-"x": "3.1"
-},
-{
-"l": "2.10",
-"t": "scenario",
-"tags": [
 "tuning"
 ],
 "q": "You need a model to always output in a specific style/format and you have many examples. Best technique?",
@@ -1445,7 +1333,7 @@
 "q": "5 areas where humans-in-the-loop are key?",
 "a": "Content moderation · sensitive applications (healthcare, finance) · high-risk decisions · pre-generation review · post-generation review.",
 "id": "c2-065",
-"x": "4.3"
+"x": "3.1"
 },
 {
 "l": "2.10",
@@ -1456,7 +1344,7 @@
 "q": "Pre-generation vs post-generation review?",
 "a": "Pre: experts validate outputs before deployment. Post: continuous review after deployment to adapt and improve.",
 "id": "c2-066",
-"x": "4.3"
+"x": "3.1"
 },
 {
 "l": "2.10",
@@ -1508,8 +1396,8 @@
 "tags": [
 "security"
 ],
-"q": "What does SAIF help organisations do?",
-"a": "Find and stop threats · automatically strengthen defences · manage each AI system's unique risks; integrates with existing security so models are secure by default.",
+"q": "What is Google's Secure AI Framework (SAIF) and what does it help organisations do?",
+"a": "Google's framework of security standards for building and deploying AI (AI/ML model risk management). Helps: find and stop threats · automatically strengthen defences · manage each AI system's unique risks; integrates with existing security so models are secure by default.",
 "id": "c2-071",
 "x": "4.2"
 },
@@ -1648,17 +1536,6 @@
 "x": "4.3"
 },
 {
-"l": "3.1",
-"t": "list",
-"tags": [
-"landscape"
-],
-"q": "3 questions Course 3 answers?",
-"a": "What are the layers of building gen AI · what Google Cloud options exist · when to choose one solution over another.",
-"id": "c3-001",
-"x": "1.3"
-},
-{
 "l": "3.2",
 "t": "list",
 "tags": [
@@ -1676,8 +1553,8 @@
 "landscape",
 "agents"
 ],
-"q": "Agent layer definition (layers lesson)?",
-"a": "Software that works out how best to achieve a goal using its inputs and available tools: autonomous action and multi-step tasks a model alone can't do. Course says agents 'independently set goals'; in practice they pursue a goal they are given.",
+"q": "How does the layers lesson define the agent layer?",
+"a": "Software that learns how best to achieve a goal from its inputs and the tools available: autonomous action and multi-step tasks a model alone can't do. Course says agents 'independently set goals'; in practice they pursue a goal they are given.",
 "id": "c3-003",
 "x": "1.3"
 },
@@ -1768,7 +1645,7 @@
 "q": "Which Google Cloud tool lets teams create agents in natural language instead of complex code?",
 "a": "AI Applications.",
 "id": "c3-011",
-"x": "1.3"
+"x": "2.4"
 },
 {
 "l": "3.3",
@@ -1820,7 +1697,7 @@
 "tags": [
 "agents"
 ],
-"q": "An agent inspects security logs, flags anomalies, opens a ticket and assigns humans. Which type and family?",
+"q": "An agent inspects security logs, flags anomalies, opens a ticket and assigns humans. Which agent type (conversational or workflow) and which use-case family?",
 "a": "Workflow agent; security agent use case.",
 "id": "c3-016",
 "x": "1.3"
@@ -1835,7 +1712,7 @@
 "q": "Which Gemini feature is cited for autonomous in-depth research reports?",
 "a": "Gemini Deep Research.",
 "id": "c3-017",
-"x": "1.3"
+"x": "2.2"
 },
 {
 "l": "3.4",
@@ -1922,7 +1799,7 @@
 "tags": [
 "platform"
 ],
-"q": "6 key features of Agent Platform?",
+"q": "6 key features of Agent Platform [Vertex AI]?",
 "a": "Open & flexible (no lock-in) · powerful infrastructure · pre-trained models · comprehensive tooling · customisation (built-in IDE) · easy integration (APIs).",
 "id": "c3-025",
 "x": "2.4"
@@ -2006,25 +1883,13 @@
 },
 {
 "l": "3.7",
-"t": "number",
-"tags": [
-"models",
-"platform"
-],
-"q": "What does Model Garden offer (course figure on size)?",
-"a": "Discover, customise and deploy models from Google, partners and open source. Course said 'over 160 models'; the figure keeps changing — don't memorise the number.",
-"id": "c3-033",
-"x": "2.4"
-},
-{
-"l": "3.7",
 "t": "def",
 "tags": [
 "models",
 "platform"
 ],
 "q": "What does Model Garden let you do?",
-"a": "Discover, customise and deploy existing models from Google and partners (Google, third-party, open-source).",
+"a": "Discover, customise and deploy existing models from Google and Google partners: first-party, third-party and open-source. Some work out of the box without tuning.",
 "id": "c3-034",
 "x": "2.4"
 },
@@ -2048,7 +1913,7 @@
 "q": "Which model in Model Garden is for text-to-image? Text/image-to-video? Speech-to-text?",
 "a": "Imagen · Veo · Chirp (2.0).",
 "id": "c3-036",
-"x": "2.4"
+"x": "1.4"
 },
 {
 "l": "3.7",
@@ -2129,35 +1994,12 @@
 "x": "2.4"
 },
 {
-"l": "3.8",
-"t": "number",
-"tags": [
-"usecase"
-],
-"q": "Cymbal Aerospace results?",
-"a": "Product development cycles 15% faster · design review time -20% · manufacturing planning bottlenecks eliminated.",
-"id": "c3-044",
-"x": "2.4"
-},
-{
-"l": "3.8",
-"t": "fact",
-"tags": [
-"usecase",
-"platform"
-],
-"q": "How did Cymbal Aerospace deploy without managing servers?",
-"a": "Serverless infrastructure; Agent Platform handled MLOps (scaling, infrastructure).",
-"id": "c3-045",
-"x": "2.4"
-},
-{
 "l": "3.9",
 "t": "def",
 "tags": [
 "infrastructure"
 ],
-"q": "Infrastructure layer = ?",
+"q": "What does the infrastructure layer provide, and for what purpose?",
 "a": "Hardware + software providing compute, storage and networking to train, deploy and scale models.",
 "id": "c3-046",
 "x": "2.1"
@@ -2182,17 +2024,6 @@
 "q": "What is a hypercomputer?",
 "a": "A supercomputer made by linking many nodes (with GPUs/TPUs) over high-speed networks to act as one unit.",
 "id": "c3-048",
-"x": "2.1"
-},
-{
-"l": "3.9",
-"t": "def",
-"tags": [
-"infrastructure"
-],
-"q": "What does throughput mean in storage?",
-"a": "The amount of work done within a specific period of time.",
-"id": "c3-049",
 "x": "2.1"
 },
 {
@@ -2261,7 +2092,7 @@
 "q": "What is Gemini Nano and where is it used?",
 "a": "Google's most efficient, compact Gemini model for on-device use. Pixel (Call Notes, Recorder summaries) and Android via AI Edge SDK.",
 "id": "c3-055",
-"x": "2.1"
+"x": "1.4"
 },
 {
 "l": "3.10",
@@ -2354,17 +2185,6 @@
 },
 {
 "l": "3.11",
-"t": "fact",
-"tags": [
-"cost"
-],
-"q": "Which metric does the course say Google charges on for some services?",
-"a": "Number of characters processed.",
-"id": "c3-064",
-"x": "4.1"
-},
-{
-"l": "3.11",
 "t": "list",
 "tags": [
 "cost"
@@ -2394,7 +2214,7 @@
 "q": "What is a token?",
 "a": "A piece of text — a word or part of a word.",
 "id": "c3-067",
-"x": "4.1"
+"x": "1.1"
 },
 {
 "l": "3.12",
@@ -2519,28 +2339,6 @@
 "x": "4.1"
 },
 {
-"l": "4.1",
-"t": "list",
-"tags": [
-"strategy"
-],
-"q": "2 questions to ask while experimenting with gen AI apps?",
-"a": "Is this use case repeatable (for me/my team)? Is gen AI falling short because it lacks customisation?",
-"id": "c4-001",
-"x": "4.1"
-},
-{
-"l": "4.2",
-"t": "fact",
-"tags": [
-"workspace"
-],
-"q": "What is the current name for Gemini built into Gmail, Docs, Sheets, Meet and Slides?",
-"a": "Google Workspace with Gemini.",
-"id": "c4-002",
-"x": "2.2"
-},
-{
 "l": "4.2",
 "t": "def",
 "tags": [
@@ -2642,17 +2440,6 @@
 },
 {
 "l": "4.3",
-"t": "number",
-"tags": [
-"usecase"
-],
-"q": "Understood.org time savings with Gemini?",
-"a": "~10 hours per research project; partnerships team ~2 hours per day.",
-"id": "c4-012",
-"x": "2.2"
-},
-{
-"l": "4.3",
 "t": "fact",
 "tags": [
 "usecase"
@@ -2669,8 +2456,8 @@
 "usecase",
 "responsible"
 ],
-"q": "What did Understood.org researchers do before handing Gemini outputs on?",
-"a": "Asked Gemini to cite sources, verified outputs, exported to Google Docs.",
+"q": "In the Understood.org case, what did the research team do with Gemini outputs before handing them to the partnerships team?",
+"a": "Asked Gemini to cite its sources, then humans verified the outputs (human in the loop) and exported them to a Google Doc.",
 "id": "c4-014",
 "x": "4.3"
 },
@@ -2683,17 +2470,6 @@
 "q": "Zero-shot vs one-shot vs few-shot prompting?",
 "a": "Zero: no examples. One: one example. Few: multiple examples.",
 "id": "c4-015",
-"x": "3.2"
-},
-{
-"l": "4.4",
-"t": "fact",
-"tags": [
-"prompting"
-],
-"q": "Mnemonics for zero/one/few-shot?",
-"a": "Just tell it · guide it with a single example · show, don't tell.",
-"id": "c4-016",
 "x": "3.2"
 },
 {
@@ -2748,9 +2524,9 @@
 "gems"
 ],
 "q": "Ways to reuse prompts in Gemini (simple → tailored)?",
-"a": "Prompt templates (Docs/Sheets) · prompt chaining in one thread (name/pin chats) · Saved info · Gems.",
+"a": "Prompt templates (saved in Docs/Sheets) · prompt chaining in one thread (name/pin chats) · Gemini Advanced · Saved info · Gems.",
 "id": "c4-021",
-"x": "3.2"
+"x": "2.2"
 },
 {
 "l": "4.7",
@@ -2791,7 +2567,7 @@
 "tags": [
 "gems"
 ],
-"q": "Social media manager needing a consistent brand voice across platforms. Best strategy?",
+"q": "Social media manager needs a consistent brand voice across platforms. Best strategy: prompt chaining, Saved info or a Gem?",
 "a": "A Gem.",
 "id": "c4-025",
 "x": "2.2"
@@ -2802,7 +2578,7 @@
 "tags": [
 "gems"
 ],
-"q": "Sales rep wants pitch feedback without influence from previous practice sessions, but Gemini should know they're a sales rep. Strategy?",
+"q": "Sales rep wants pitch feedback without influence from previous practice sessions, but Gemini should always know they're a sales rep. Best strategy: prompt chaining, Saved info or a Gem?",
 "a": "Saved info.",
 "id": "c4-026",
 "x": "2.2"
@@ -2813,7 +2589,7 @@
 "tags": [
 "gems"
 ],
-"q": "Writer brainstorming a story and iterating on feedback in one conversation. Strategy?",
+"q": "Writer brainstorming a story and iterating on feedback within one conversation. Best strategy: prompt chaining, Saved info or a Gem?",
 "a": "Prompt chaining.",
 "id": "c4-027",
 "x": "2.2"
@@ -2936,7 +2712,7 @@
 "security"
 ],
 "q": "What does Gemini Notebook Enterprise add?",
-"a": "Compliance and admin features: extra privacy/security, sharing only with chosen collaborators, access via IAM roles.",
+"a": "Everything in Plus, plus compliance and admin features: extra privacy/security, sharing only with chosen collaborators, access managed via predefined IAM roles.",
 "id": "c4-038",
 "x": "2.2"
 },
@@ -2991,7 +2767,7 @@
 "tags": [
 "notebook"
 ],
-"q": "Studio panel outputs in Gemini Notebook?",
+"q": "Which learning outputs can Gemini Notebook generate from your sources?",
 "a": "Audio Overviews, flashcards, quizzes, and more.",
 "id": "c4-043",
 "x": "2.2"
@@ -3015,9 +2791,9 @@
 "grounding"
 ],
 "q": "True/false: grounding is exclusive to Gemini Notebook.",
-"a": "False.",
+"a": "False — grounding also happens via Gems (attached resources), documents attached to Gemini prompts, and RAG systems.",
 "id": "c4-045",
-"x": "2.2"
+"x": "3.3"
 },
 {
 "l": "4.11",
@@ -3025,7 +2801,7 @@
 "tags": [
 "notebook"
 ],
-"q": "Key benefit of a shared notebook for the VC firm?",
+"q": "A VC firm's documents are scattered across departments and platforms. Key benefit of putting them in a shared Gemini Notebook?",
 "a": "A single source of truth breaking down information silos; collaborative analysis and faster decisions.",
 "id": "c4-046",
 "x": "2.2"
@@ -3051,7 +2827,7 @@
 "q": "Which Gemini helps design, manage and optimise apps on Google Cloud using your resources, metrics and logs?",
 "a": "Gemini Cloud Assist.",
 "id": "c4-048",
-"x": "2.1"
+"x": "2.2"
 },
 {
 "l": "4.12",
@@ -3062,7 +2838,7 @@
 "q": "Which Gemini acts as an AI pair programmer across 20+ languages?",
 "a": "Gemini Code Assist.",
 "id": "c4-049",
-"x": "2.1"
+"x": "2.2"
 },
 {
 "l": "4.12",
@@ -3073,7 +2849,7 @@
 "q": "Which Gemini helps write Python in notebooks?",
 "a": "Gemini in Colab Enterprise.",
 "id": "c4-050",
-"x": "2.1"
+"x": "2.2"
 },
 {
 "l": "4.12",
@@ -3084,7 +2860,7 @@
 "q": "Which Gemini manages a fleet of databases from one interface?",
 "a": "Gemini in Databases.",
 "id": "c4-051",
-"x": "2.1"
+"x": "2.2"
 },
 {
 "l": "4.12",
@@ -3095,7 +2871,7 @@
 "q": "Which Gemini summarises threat actors' tactics, techniques and procedures?",
 "a": "Gemini in Security.",
 "id": "c4-052",
-"x": "2.1"
+"x": "2.2"
 },
 {
 "l": "4.12",
@@ -3106,7 +2882,7 @@
 "q": "Which Gemini makes data analysis accessible regardless of SQL experience?",
 "a": "Gemini in BigQuery.",
 "id": "c4-053",
-"x": "2.1"
+"x": "2.2"
 },
 {
 "l": "4.12",
@@ -3117,7 +2893,7 @@
 "q": "Which Gemini helps create visualisations and reports from data (BI)?",
 "a": "Gemini in Looker.",
 "id": "c4-054",
-"x": "2.1"
+"x": "2.2"
 },
 {
 "l": "4.13",
@@ -3126,32 +2902,10 @@
 "usecase",
 "gcloud"
 ],
-"q": "Cymbal Retail: how did marketers query BigQuery without SQL?",
+"q": "Marketers lack SQL skills and wait on the analytics team for data. How did Cymbal Retail let them query BigQuery directly?",
 "a": "Gemini in BigQuery with function calling in a user-friendly app translated natural language into SQL.",
 "id": "c4-055",
-"x": "2.1"
-},
-{
-"l": "4.13",
-"t": "list",
-"tags": [
-"usecase"
-],
-"q": "3 results for Cymbal Retail?",
-"a": "Increased agility · improved collaboration (analysts freed) · enhanced data literacy.",
-"id": "c4-056",
-"x": "2.1"
-},
-{
-"l": "5.1",
-"t": "fact",
-"tags": [
-"agents"
-],
-"q": "Does needing a custom gen AI solution mean building from the ground up?",
-"a": "No — build custom agents on existing layers (models, platform, tools).",
-"id": "c5-001",
-"x": "1.3"
+"x": "2.2"
 },
 {
 "l": "5.2",
@@ -3181,7 +2935,7 @@
 "tags": [
 "agents"
 ],
-"q": "Which components did deterministic agents have?",
+"q": "Which of the three agent components did deterministic agents have?",
 "a": "Only reasoning loop and tools — no foundational gen AI model.",
 "id": "c5-004",
 "x": "2.5"
@@ -3227,8 +2981,8 @@
 "agents",
 "tools"
 ],
-"q": "Tool types named in the agent components card?",
-"a": "Extensions (APIs), functions (mock API calls), data stores (e.g. vector databases).",
+"q": "In the three-component agent definition, what do tools let an agent do, and which three tool examples are given?",
+"a": "Interact with the outside world (observe and act): extensions (APIs), functions (mock API calls), data stores (e.g. vector databases).",
 "id": "c5-008",
 "x": "2.5"
 },
@@ -3326,8 +3080,8 @@
 "tags": [
 "parameters"
 ],
-"q": "5 common parameters listed?",
-"a": "Token count · temperature · top-p · safety settings · output length.",
+"q": "Which sampling parameters does the course list?",
+"a": "Token count · temperature · top-p · top-k · safety settings · output length.",
 "id": "c5-017",
 "x": "3.3"
 },
@@ -3373,7 +3127,7 @@
 "products"
 ],
 "q": "Google AI Studio vs Agent Studio — limits and advantages?",
-"a": "AI Studio: usage limits (QPM/RPM/TPM), not for production; simple. Agent Studio: usage-based charges; flexible quotas, enterprise-grade security & compliance.",
+"a": "AI Studio: usage limits (queries, requests and tokens per minute); for prototyping/small-scale, not production; simple to start. Agent Studio: usage-based charges; more flexible quotas (raisable on request); enterprise-grade security and compliance.",
 "id": "c5-021",
 "x": "2.5"
 },
@@ -3386,28 +3140,6 @@
 "q": "Large-scale, production gen AI app with compliance needs — AI Studio or Agent Studio?",
 "a": "Agent Studio.",
 "id": "c5-022",
-"x": "2.5"
-},
-{
-"l": "5.4",
-"t": "list",
-"tags": [
-"apis"
-],
-"q": "What can you configure in Google AI Studio (demo)?",
-"a": "System instructions · model choice · temperature, thinking level, top-P · safety settings · tools: function calling, structured output, grounding with Google Search.",
-"id": "c5-023",
-"x": "2.5"
-},
-{
-"l": "5.4",
-"t": "fact",
-"tags": [
-"apis"
-],
-"q": "What do you need before using code exported from Google AI Studio?",
-"a": "An API key.",
-"id": "c5-024",
 "x": "2.5"
 },
 {
@@ -3453,7 +3185,7 @@
 "q": "4 aspects of the reasoning loop?",
 "a": "Iterative process · internal reasoning (via the LLM) · decision making (tools, inputs) · reasoning frameworks.",
 "id": "c5-028",
-"x": "3.2"
+"x": "2.5"
 },
 {
 "l": "5.7",
@@ -3640,7 +3372,7 @@
 "gcloud"
 ],
 "q": "Serverless functions acting as agent tools (call APIs, calculations), auto-scaling — which service?",
-"a": "Cloud Run functions.",
+"a": "Cloud Run functions (exam guide: Cloud Functions).",
 "id": "c5-045",
 "x": "2.5"
 },
@@ -3678,17 +3410,6 @@
 "q": "Databases named as agent tooling?",
 "a": "Cloud SQL, Spanner, Firestore.",
 "id": "c5-048",
-"x": "2.5"
-},
-{
-"l": "5.9",
-"t": "number",
-"tags": [
-"apis"
-],
-"q": "How many languages does the Translation API support (course figure)?",
-"a": "More than 135.",
-"id": "c5-049",
 "x": "2.5"
 },
 {
@@ -3766,7 +3487,7 @@
 "q": "Credentials to call Gemini: Google AI Studio vs Agent Studio?",
 "a": "AI Studio: API key. Agent Studio: Google Cloud authentication & authorisation.",
 "id": "c5-056",
-"x": "2.4"
+"x": "2.5"
 },
 {
 "l": "5.10",
@@ -3788,7 +3509,7 @@
 "q": "Which platform automates Workspace tasks with JavaScript and can use the Gemini API for add-ons?",
 "a": "Apps Script.",
 "id": "c5-058",
-"x": "2.2"
+"x": "2.4"
 },
 {
 "l": "5.10",
@@ -3896,8 +3617,8 @@
 "rag",
 "apis"
 ],
-"q": "How do you turn on RAG with live web data in Google AI Studio?",
-"a": "Run settings → Tools → Grounding using Google Search.",
+"q": "In Google AI Studio, how do you make Gemini answer a time-sensitive question with current, sourced information?",
+"a": "Turn on the Grounding with Google Search tool (RAG on real-time web data).",
 "id": "c5-068",
 "x": "3.3"
 },
@@ -3907,8 +3628,8 @@
 "tags": [
 "search"
 ],
-"q": "What does Agent Platform Search combine?",
-"a": "Information retrieval + natural language processing + LLMs. It is mainly enterprise search and retrieval (RAG) that apps and agents use.",
+"q": "What does Agent Search combine to understand poorly phrased queries?",
+"a": "Information retrieval + natural language processing + LLMs.",
 "id": "c5-069",
 "x": "2.3"
 },
@@ -3918,7 +3639,7 @@
 "tags": [
 "search"
 ],
-"q": "Specialised Agent Search search options?",
+"q": "Agent Search's four specialised search variants?",
 "a": "Document search · media search · healthcare search · search for commerce.",
 "id": "c5-070",
 "x": "2.3"
@@ -4021,7 +3742,7 @@
 "cx"
 ],
 "q": "Components of Gemini Enterprise for CX?",
-"a": "CX agents (built in CX Agent Studio) · Agent Assist (for human agents) · CX Insights (conversation analytics) · all on Contact Center as a Service (CCaaS).",
+"a": "CX agents (built in CX Agent Studio) · Agent Assist (for human agents) · CX Insights (conversation analytics) · all on Contact Center as a Service (CCaaS). [Exam guide: Customer Engagement Suite]",
 "id": "c5-079",
 "x": "2.3"
 },
@@ -4054,7 +3775,7 @@
 "cx"
 ],
 "q": "Which tool analyses sentiment, entities and topics across conversations and scores interactions?",
-"a": "CX Insights.",
+"a": "CX Insights (exam guide: Conversational Insights).",
 "id": "c5-082",
 "x": "2.3"
 },
@@ -4093,37 +3814,14 @@
 },
 {
 "l": "5.16",
-"t": "number",
-"tags": [
-"usecase",
-"cx"
-],
-"q": "Cymbal Taxes results?",
-"a": "NPS +15 points · call volume -20% · email inquiries -30%.",
-"id": "c5-086",
-"x": "2.3"
-},
-{
-"l": "5.16",
 "t": "scenario",
 "tags": [
 "usecase",
 "cx"
 ],
-"q": "Cymbal Taxes: how was the tax assistant built?",
-"a": "CX Agent Studio with natural-language instructions + a data store tool (tax laws, FAQs, customer data).",
+"q": "Cymbal Taxes needed instant, personalised 24/7 support during tax-season inquiry peaks. What did it build, and how?",
+"a": "An agentic tax assistant in CX Agent Studio (Gemini Enterprise for CX): natural-language instructions + a data store tool (tax laws, FAQs, customer data).",
 "id": "c5-087",
-"x": "2.3"
-},
-{
-"l": "5.16",
-"t": "fact",
-"tags": [
-"usecase"
-],
-"q": "Primary challenge solved for Cymbal Taxes?",
-"a": "Keeping up with high inquiry volume during tax season.",
-"id": "c5-088",
 "x": "2.3"
 },
 {
@@ -4165,7 +3863,7 @@
 "tags": [
 "cx"
 ],
-"q": "Recommended tool for production customer chatbots (e.g. adversarial defence)?",
+"q": "For a production-grade customer chatbot (e.g. needing adversarial defence), which tool does the course recommend over Google AI Studio?",
 "a": "CX Agent Studio.",
 "id": "c5-092",
 "x": "2.3"
@@ -4282,17 +3980,6 @@
 "x": "4.1"
 },
 {
-"l": "5.19",
-"t": "fact",
-"tags": [
-"exam"
-],
-"q": "Exam format stated in the course?",
-"a": "Proctored, about 90 minutes; register at cloud.google.com/learn/certification/generative-ai-leader.",
-"id": "c5-103",
-"x": "4.1"
-},
-{
 "l": "2.2",
 "x": "1.1",
 "t": "def",
@@ -4364,7 +4051,7 @@
 "exam"
 ],
 "q": "Imagen — what is it and when would you pick it?",
-"a": "Google's text-to-image diffusion model: high-quality images from text descriptions, plus image editing. Use for marketing visuals, product imagery, creative content.",
+"a": "Google's text-to-image diffusion model: high-quality images from text descriptions. Use for creative design, e-commerce visualisation, content creation.",
 "id": "e-006"
 },
 {
@@ -4405,27 +4092,15 @@
 },
 {
 "l": "2.6",
-"x": "3.1",
+"x": "2.4",
 "t": "trap",
 "tags": [
 "platform",
 "exam"
 ],
 "q": "Model Garden vs Model Registry?",
-"a": "Model Garden: catalogue to discover, test, customise and deploy available models (Google, partner, open). Model Registry: manage YOUR models' versions and lifecycle.",
+"a": "Model Garden: catalogue to discover, customise and deploy available models (Google, third-party, open). Model Registry: manages YOUR own models' versions and lifecycle.",
 "id": "e-010"
-},
-{
-"l": "2.6",
-"x": "1.1",
-"t": "fact",
-"tags": [
-"data",
-"exam"
-],
-"q": "Data Catalog status in 2026?",
-"a": "Discontinued 1 June 2026; replaced by Knowledge Catalog (formerly Dataplex Universal Catalog). The course still names Data Catalog.",
-"id": "e-011"
 },
 {
 "l": "2.11",
@@ -4592,7 +4267,7 @@
 "exam"
 ],
 "q": "A company wants a virtual agent that handles customer chats and takes actions like refunds. Which Gemini Enterprise for CX component?",
-"a": "CX agents, built in CX Agent Studio.",
+"a": "CX agents, built in CX Agent Studio (exam guide: Conversational Agents).",
 "id": "e-025"
 },
 {
@@ -4604,7 +4279,7 @@
 "exam"
 ],
 "q": "A contact-centre manager wants sentiment and topic analysis across all calls. Which component?",
-"a": "CX Insights.",
+"a": "CX Insights (exam guide: Conversational Insights).",
 "id": "e-026"
 },
 {
@@ -4641,7 +4316,7 @@
 "exam"
 ],
 "q": "What does the Gemini Notebook API add over using Gemini Notebook in the browser?",
-"a": "Programmatic access: create and manage notebooks, add sources and generate outputs (e.g. overviews) from your own apps and workflows inside Gemini Enterprise.",
+"a": "Programmatic access to notebooks from your own apps and workflows (within Gemini Enterprise).",
 "id": "e-029"
 },
 {
@@ -4653,7 +4328,7 @@
 "exam"
 ],
 "q": "Google Cloud services for agent tooling (exam guide list)?",
-"a": "Cloud Storage · databases · Cloud Functions · Cloud Run · Agent Platform · Speech-to-Text, Text-to-Speech, Translation, Document Translation, Document AI, Cloud Vision, Cloud Video Intelligence, Natural Language APIs · Google Cloud API Library.",
+"a": "Cloud Storage · databases · Cloud Run functions (exam guide: Cloud Functions) · Cloud Run · Agent Platform · Speech-to-Text, Text-to-Speech, Translation, Document Translation, Document AI, Cloud Vision, Cloud Video Intelligence, Natural Language APIs · Google Cloud API Library.",
 "id": "e-030"
 },
 {
@@ -4764,30 +4439,6 @@
 "q": "Is Agent Search an agent?",
 "a": "The course describes it as acting like an agent (observes the query, uses data stores as tools). Mainly it is managed enterprise search, retrieval and RAG that apps and agents use.",
 "id": "e-039"
-},
-{
-"l": "5.7",
-"x": "3.2",
-"t": "fact",
-"tags": [
-"prompting",
-"exam"
-],
-"q": "Caveat on chain-of-thought 'explainability'?",
-"a": "The course lists explainability as a CoT benefit, and the exam may too. But visible reasoning steps are not a guaranteed account of how the model actually reached its answer.",
-"id": "e-040"
-},
-{
-"id": "n-001",
-"l": "1.3",
-"x": "2.4",
-"t": "trap",
-"tags": [
-"names",
-"exam"
-],
-"q": "What is Vertex AI called now?",
-"a": "Gemini Enterprise Agent Platform (Agent Platform)."
 },
 {
 "id": "n-002",

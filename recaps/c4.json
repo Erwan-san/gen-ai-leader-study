@@ -1,0 +1,141 @@
+{
+  "course": {
+    "id": "4",
+    "oneline": "Using Google's no-code gen AI apps (Workspace with Gemini, Gems, Gemini Notebook, Gemini for Google Cloud) and prompting techniques in daily work; the exam tests which tool fits which need.",
+    "key": [
+      {"t": "Google Workspace with Gemini", "d": "**Google Workspace with Gemini** (exam: Gemini for Google Workspace) puts Gemini inside Gmail, Docs, Sheets, Meet and Slides. Features depend on **Workspace edition**; business and enterprise licences add **enterprise-grade data protection**."},
+      {"t": "Prompting with examples", "d": "**Zero-shot**: no examples, relies on existing knowledge. **One-shot**: one example to apply to similar cases. **Few-shot**: multiple examples for better task understanding. Techniques can be combined."},
+      {"t": "Role prompting and prompt chaining", "d": "**Role prompting** assigns a specific role or persona to shape style, tone and focus. **Prompt chaining** makes each response build on the previous one, refining incrementally."},
+      {"t": "Reuse: Saved info versus Gems", "d": "**Prompt templates** store reusable prompts. **Saved info** is persistent context used across all chats. **Gems** are task-specific assistants with instructions and attached resources; separate chats, nothing spills over."},
+      {"t": "Grounding and RAG", "d": "**Grounding** connects output to verifiable, specific sources. **RAG** retrieves from a knowledge base, then generates: better accuracy, explainability, lower hallucination risk. Offerings: pre-built RAG with **Agent Search**, RAG APIs, Grounding with Google Search."},
+      {"t": "Gemini Notebook", "d": "**Gemini Notebook** is no-code RAG: it answers only from your sources, with **citations**, and says when it can't answer. Shared notebooks give a **single source of truth**; Studio offers Audio Overviews and quizzes."},
+      {"t": "Gemini for Google Cloud", "d": "**Gemini for Google Cloud** does not use your prompts or responses to train models. Portfolio: Gemini Cloud Assist, Gemini in BigQuery, Gemini Code Assist, Colab Enterprise, Databases, Looker, Security."},
+      {"t": "Spot use cases worth tailoring", "d": "While experimenting, ask whether a use case is **repeatable** and whether gen AI falls short for lack of **customisation**; raise these with the team. Humans verify outputs (**HITL**)."}
+    ],
+    "watch": [
+      "**Gemini for Google Workspace** (exam guide name) and **Google Workspace with Gemini** (current name) are the same product.",
+      "**Gemini Notebook** uses only your sources, not the entire internet; **grounding** is not exclusive to it (Gems, prompts, RAG).",
+      "**Saved info** applies to all chats; **Gems** are task-specific; prompt chaining keeps context within one conversation.",
+      "No-SQL analysis → **Gemini in BigQuery**; fleet management → Databases; Python/ML → Colab Enterprise; threat containment → Security."
+    ]
+  },
+  "lessons": {
+    "4.1": {
+      "gist": "Course introduction: learn gen AI hands-on with existing apps, and spot use cases worth customising or automating for the team.",
+      "points": [
+        "The best way to grasp gen AI is **hands-on with existing apps**, chatbots included; they don't show every capability but spark ideas.",
+        "While experimenting, ask: is this use case **repeatable**? Is gen AI falling short because it lacks **customisation** (output \"a bit off\")?",
+        "Write such cases down and raise them with the team: they have the biggest organisational impact (leading to **Gems**, Gemini Notebook, custom agents).",
+        "Course questions: gen AI in your **daily workflow**, techniques to improve prompting, products needing **no development expertise**, and **more automated workflows**."
+      ]
+    },
+    "4.2": {
+      "gist": "Google Workspace with Gemini (exam: Gemini for Google Workspace) puts the Gemini model inside Workspace apps; what each app's features do.",
+      "points": [
+        "**Google Workspace** = cloud productivity and collaboration tools (Gmail, Docs, Sheets, Meet, Slides); available Gemini features depend on your **Workspace edition**.",
+        "**Business and enterprise licences** add **enterprise-grade data protection**, extending to Workspace with Gemini and the Gemini app, plus **admin features** to manage usage and access.",
+        "**Gemini side panel** works across emails and docs without switching apps; Sheets can **generate formulas**; Slides creates **photorealistic images**; Meet does real-time transcription, translation, summaries.",
+        "**Google Vids** drafts videos with \"Help me Create\". **AppSheet** is a **no-code app builder** (enterprise editions); Gemini in AppSheet builds app structure from natural language."
+      ]
+    },
+    "4.3": {
+      "gist": "Understood.org used Google Workspace with Gemini and the Gemini app to surface trends, build donor profiles and tailor fundraising communications.",
+      "points": [
+        "Research team asks Gemini trend questions and has it **cite its sources**; the team **verifies** the outputs, exports them to a Google Doc, hands off.",
+        "The partnerships team then uses Gemini to write **personalised messages** to donors and partners, edited before sending.",
+        "Key benefit (knowledge check): **saving time on repetitive tasks** and personalising communications; not eliminating humans, not one-off email writing.",
+        "Workspace with Gemini goes beyond content generation to **organisational efficiency and customisation**; humans verify outputs (**HITL**). Gemini also reduces **cognitive load** of context switching."
+      ]
+    },
+    "4.4": {
+      "gist": "Prompting with examples: zero-shot, one-shot and few-shot, practised by classifying a tricky help-desk ticket.",
+      "points": [
+        "**Zero-shot**: a task with **no examples**, relying on existing knowledge. Mnemonic: \"Just tell it what you want.\"",
+        "**One-shot**: **one example** to learn from and apply to similar cases. Mnemonic: \"Guide it with a single example.\"",
+        "**Few-shot**: **multiple examples** for better task understanding and performance. Mnemonic: \"Show, don't tell.\" You can **combine** techniques.",
+        "Exercise \"Help desk hero\": classify a support ticket with each technique and reflect on how the **number of examples** changes prompt, result and trade-offs."
+      ]
+    },
+    "4.5": {
+      "gist": "Role prompting: assigning the model a specific role or persona to shape the style, tone and focus of its responses.",
+      "points": [
+        "**Role prompting** guides an LLM by assigning a **specific role or persona** (business analyst, Shakespearean actor, helpful customer-service agent).",
+        "It shapes **style, tone and focus**: the model acts as an **expert or character**, so content is tailored.",
+        "Template: \"You are a [persona]. Please write a [task].\" Bonus: rerun the same task with a different persona and compare.",
+        "Role prompting is also the recommended way to write **Gem instructions**."
+      ]
+    },
+    "4.6": {
+      "gist": "Prompt chaining: each response builds on the previous one, step by step, to reach more complex and nuanced results.",
+      "points": [
+        "**Prompt chaining**: each response **builds on the previous one**, like a conversation; in Gemini, earlier prompts affect later ones (shared context).",
+        "Method: start with a **broad initial prompt**, follow up with clarifications, specifics or a different format, then refine **incrementally** rather than in one request.",
+        "General definition: a task split into a **sequence of prompts** where each output feeds the next step; a chat conversation is one way.",
+        "Exercise \"The chain reaction\": e.g. a Tokyo business-trip itinerary, then follow-ups adding hotels near the conference centre or day trips."
+      ]
+    },
+    "4.7": {
+      "gist": "Levels of reusing prompts without code, from prompt templates to chaining, Gemini Advanced, Saved info and Gems.",
+      "points": [
+        "Simple to tailored: **prompt templates** (saved in a Google Doc or Sheet), chaining in one thread (name and pin chats), Gemini Advanced, Saved info, Gems.",
+        "**Gemini Advanced**: upgraded Gemini for coding, logical reasoning, nuanced instructions, creative collaboration; you can set **data retention** and delete conversation history.",
+        "**Saved info** (set in Settings) is used **across all chats**: context remembered without full conversation history influencing answers, e.g. a sales rep practising pitches.",
+        "**Gems** give **task-specific** context when Saved info is too broad. Rule: chaining = in-conversation context; Saved info = global persistent; Gems = task-specific assistants."
+      ]
+    },
+    "4.8": {
+      "gist": "Gems as personalised AI assistants inside Gemini: their three benefits, how to build them, and best practices.",
+      "points": [
+        "Three benefits: **personalised responses**, **streamlined workflows**, and **reset context**: multiple separate chats with one Gem, nothing spills over between them.",
+        "Use Google's **pre-made Gems** or create a **custom Gem**, whose instructions prompt the agent how to act; role prompting fits well here.",
+        "**Attach documents and resources** for a focused knowledge base, e.g. a code-reviewer Gem with the project style guide, so feedback is **grounded**.",
+        "Best practices: be **clear and specific**, provide examples, **refine instructions over time**, and think about how users will interact with it."
+      ]
+    },
+    "4.9": {
+      "gist": "Grounding connects outputs to verifiable sources; RAG retrieves external knowledge before generating; Gemini Notebook offers RAG without code.",
+      "points": [
+        "**Grounding**: connecting output to **verifiable, specific sources**, critical for trust and reliability. No-code: attach resources to a Gem, or documents in Gemini prompts.",
+        "**RAG**: **retrieve** relevant information from a knowledge base (often via semantic search or vector databases), embed it in the prompt, then **generate**.",
+        "Versus model only: latest external knowledge, much lower **hallucination** risk. Benefits: accuracy and relevance, **explainability and transparency**, extending LLM capabilities (constraining output).",
+        "Exam guide distinguishes grounding with **first-party enterprise data** (your own), **third-party data** (external datasets) and **world data** (public knowledge, e.g. Google Search)."
+      ]
+    },
+    "4.10": {
+      "gist": "Gemini Notebook: an AI-first notebook grounded only in your own documents; its editions, workflow, use cases and difference from Gems.",
+      "points": [
+        "**Gemini Notebook**: AI-first virtual research assistant on Gemini models; uses **only your sources**, gives **citations**, and says it can't answer when sources don't cover it.",
+        "**Gemini Notebook Plus** adds capacity, customisable response length/style, usage analytics; **Gemini Notebook Enterprise** adds compliance, admin, chosen-collaborator sharing, **IAM roles**.",
+        "Gems suit general tasks and workflows; Gemini Notebook suits **deep understanding of a specific set of information** (hyper-focused, interactive learning, source-based answers).",
+        "Sources: PDFs, text, Markdown, audio, Google Drive, website and YouTube links, pasted text. **Studio panel**: **Audio Overviews** (two AI hosts), Flashcards, Quizzes."
+      ]
+    },
+    "4.11": {
+      "gist": "A venture capital firm uses a shared Gemini Notebook to break information silos and analyse investments from a single source of truth.",
+      "points": [
+        "Problem: too much data, missed insights, documents scattered across departments (**information silos**). Solution: a **shared Gemini Notebook** workspace as a **single source of truth**.",
+        "Uses: **targeted questions**, analysing specific aspects (e.g. a startup's user acquisition costs), and to **uncover hidden connections** (early adoption versus long-term success).",
+        "Shared notebooks: build understanding together, produce collaborative summaries and reports, spot **connections and contradictions** across perspectives, stay up to date.",
+        "True/false: Gemini Notebook doesn't use the entire internet; it can create **quizzes**; it isn't for creative stories; **grounding** isn't exclusive to it."
+      ]
+    },
+    "4.12": {
+      "gist": "Gemini for Google Cloud: Gemini built into Google Cloud products for cloud, software and data roles, with enterprise data protection.",
+      "points": [
+        "**Gemini for Google Cloud** does NOT use your prompts or Gemini's responses **to train models**; standard Google Cloud **enterprise protections** apply.",
+        "**Gemini Cloud Assist**: design, manage, optimise apps using environment, metrics and logs. **Gemini Code Assist**: an **AI pair programmer**, 20+ programming languages.",
+        "**Gemini in BigQuery**: analysis regardless of SQL experience. **Gemini in Colab Enterprise**: Python in notebooks. **Gemini in Databases**: natural language, fleet of databases.",
+        "**Gemini in Looker**: understand data, create visualisations, generate reports. **Gemini in Security**: detect, contain, stop threats; analyses **attack paths**; summarises threat actors' **TTPs**."
+      ]
+    },
+    "4.13": {
+      "gist": "Cymbal Retail (fictitious) uses Gemini in BigQuery with function calling so marketers query data in natural language without writing SQL.",
+      "points": [
+        "Problem: marketers lack SQL skills and depend on the **data analytics team**, creating a **bottleneck** that delays insights.",
+        "Solution: **Gemini in BigQuery with function calling** in a user-friendly app; Gemini **translates the question into SQL**, retrieves and presents the data.",
+        "Three benefits: **increased agility**, **improved collaboration** (analysts freed for strategic work), and **enhanced data literacy** for business users.",
+        "Distractors: fleet management → Gemini in Databases; Python/ML → Colab Enterprise; threat containment → Gemini in Security. Theme: \"**democratise data access**\"."
+      ]
+    }
+  }
+}

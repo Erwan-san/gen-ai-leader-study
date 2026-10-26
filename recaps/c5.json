@@ -1,0 +1,195 @@
+{
+  "course": {
+    "id": "5",
+    "oneline": "The agents layer: how gen AI agents work (model, tools, reasoning loop), stay grounded with RAG, which Google Cloud products build them, and how to plan transformation.",
+    "key": [
+      {"t": "Three components of an agent", "d": "A gen AI agent achieves a goal by observing the world and acting on it with its tools. Components: **foundational model**, **tools** and the **reasoning loop** (core decision-maker)."},
+      {"t": "Deterministic, generative and hybrid agents", "d": "**Deterministic** agents follow predefined paths (same input → same output); **generative** agents use a model to understand intent. Evolution: deterministic → generative without RAG → generative with RAG → **hybrid agents**."},
+      {"t": "Sampling parameters steer output", "d": "**Temperature** controls randomness (low = focused, repeatable; high = creative). **Top-p** and **top-k** restrict which likely tokens are sampled. Concise, factual → lower temperature + shorter output length."},
+      {"t": "ReAct vs chain-of-thought", "d": "**ReAct** (Think → Act → Observe → Respond) = external interaction via tools; **chain-of-thought** = internal reasoning through intermediate steps. They can be combined. **Metaprompting** uses gen AI to generate prompts."},
+      {"t": "Four types of agent tools", "d": "**Extensions** connect to external APIs; **functions** define specific actions; **data stores** give access to information; plugins add new skills and integrations. Tools are the bridge to the real world."},
+      {"t": "RAG keeps agents grounded", "d": "RAG steps: **retrieval** (data stores, vector databases, search engines, knowledge graphs) → **augmentation** (context added to the prompt) → **generation** (answer that can cite sources). Grounds agents in company data."},
+      {"t": "Which Google product for which need", "d": "**Google AI Studio**: beginners, prototypes. **Agent Studio**: professional, production. **Agent Search**: enterprise search and recommendations. **Gemini Enterprise for CX** (exam: Customer Engagement Suite): customer engagement. **Gemini Enterprise app**: internal knowledge workers."},
+      {"t": "Six steps to plan ahead", "d": "Six steps: establish a clear vision, prioritise high-impact use cases, invest in capabilities, drive organisational change, measure and demonstrate value, **champion responsible AI**. Measure with **key metrics** such as **ROI**."}
+    ],
+    "watch": [
+      "**CoT** = internal reasoning; **ReAct** = external interaction. Summarising a given text → CoT; searching or locating → ReAct.",
+      "**Gemini Notebook Enterprise** = only your uploaded sources; **Gemini Enterprise app** = all connected business systems and task automation.",
+      "Exam names differ: Cloud Functions = Cloud Run functions; Conversational Agents = CX Agent Studio; Conversational Insights = CX Insights.",
+      "Agent evolution order: deterministic → generative without RAG → generative with RAG; today's most complex agents are hybrid."
+    ]
+  },
+  "lessons": {
+    "5.1": {
+      "gist": "Course introduction: transforming an organisation needs custom solutions connected to company systems, and this course focuses on the agents layer.",
+      "points": [
+        "A standard app usually isn't enough to transform an organisation; you need **custom solutions connected to company systems and processes**.",
+        "Custom does not mean building from the ground up.",
+        "The five layers are infrastructure, models, platform, agents and gen AI powered applications; this course focuses on **agents**.",
+        "Questions covered: **components of gen AI agents**, staying **grounded in reliable information**, Google Cloud products for agent building, and how to **plan ahead**."
+      ]
+    },
+    "5.2": {
+      "gist": "How agents evolved from deterministic to generative and hybrid, the modern definition of a gen AI agent, and its three components.",
+      "points": [
+        "**Deterministic** agents follow predefined paths (same input → same output) but fail on **atypical questions**; generative agents understand **intent** with some randomness.",
+        "Order oldest → newest: **deterministic agents** (reasoning loop + tools, no gen AI model) → generative without RAG → generative with **RAG** → **hybrid agents**.",
+        "A gen AI agent achieves a goal by observing the world and acting on it with its **tools**; it understands **intent** and accesses relevant information.",
+        "Three components: **foundational model** (choose training data relevant to the use case), **tools** (extensions, functions, data stores) and **reasoning loop** (e.g. ReAct)."
+      ]
+    },
+    "5.3": {
+      "gist": "Sampling parameters: the settings sent with a prompt to shape model output, and how they are accessed through APIs.",
+      "points": [
+        "**Temperature** controls randomness: low = focused, deterministic, repeatable (Q&A, summaries); high = random, diverse, creative.",
+        "**Top-k** samples from the k most-likely tokens; **top-p** samples from the smallest set whose cumulative probability ≥ p (lower = more focused).",
+        "**Token count**: 1 token ≈ 4 English characters, 100 tokens ≈ 60–80 words; also **safety settings** (filter harmful content) and **output length** (maximum length).",
+        "Recipes: concise, factual → lower temperature + shorter output length; creative → raise temperature and top-p. Parameters are sent with the prompt via **APIs**."
+      ]
+    },
+    "5.4": {
+      "gist": "Google's gen AI APIs and the two places to experiment with them: Google AI Studio versus Agent Studio.",
+      "points": [
+        "Google's gen AI APIs give access to **pre-trained LLMs** that can be **fine-tuned**: text completion, multi-turn chat, code generation, image generation.",
+        "**Google AI Studio**: web-based, standard Google account, for beginners and early-stage prototyping; has **usage limits**, not for production.",
+        "**Agent Studio** (formerly Vertex AI Studio): Google Cloud tool for professionals to **design and save prompts** and **tune foundation models**; usage-based charge, enterprise-grade security.",
+        "Rule: starting out → AI Studio; production → Agent Studio. In AI Studio, **system instructions** set tone, and **Get code** needs an **API key**."
+      ]
+    },
+    "5.5": {
+      "gist": "Hands-on lab in Google AI Studio: tuning temperature, top-p and output length on an investor-pitch prompt and comparing results.",
+      "points": [
+        "Run a creative prompt (an investor pitch for a fictional product) in the **Playground**, then rerun it after changing settings.",
+        "Lower **temperature** → more formal, factual tone; higher → more passion and enthusiasm.",
+        "In **Advanced settings**, change **output length**; lower **Top P** → focused, concise, higher → elaborate, varied.",
+        "Hands-on tuning is the best way to learn to control **tone, style and creativity**."
+      ]
+    },
+    "5.6": {
+      "gist": "Upgrading a basic agent with prompt engineering, and what the reasoning loop does.",
+      "points": [
+        "A basic AI Studio agent has no tools and a reasoning loop that just passes input to the model; **prompt engineering** adds reasoning and logic.",
+        "Prompt engineering is an agent layer before the end-user application; anyone who can prompt can prompt-engineer (e.g. **role prompting**, **few-shot** examples).",
+        "The **reasoning loop** governs how the agent takes in information, reasons internally and decides its next action, iterating until the goal or a stopping point.",
+        "Four aspects of the loop: **iterative process**, **internal reasoning**, **decision making** and reasoning frameworks. Pros also use **metaprompting** (gen AI generating prompts)."
+      ]
+    },
+    "5.7": {
+      "gist": "Two prompt-engineering frameworks for reasoning loops, ReAct (reasoning and acting) and chain-of-thought, and when to use each.",
+      "points": [
+        "**ReAct** lets the model reason and take action, looping **Think → Act → Observe → Respond**; benefits: dynamic problem solving, **reduced hallucination**, increased trustworthiness.",
+        "**Chain-of-thought (CoT)** guides the model with examples that include **intermediate reasoning steps**; benefits: improved reasoning, better accuracy, enhanced explainability.",
+        "CoT variants: **self-consistency** (choose most consistent of several solutions), **active-prompting** (LLM asks clarifying questions), **multimodal CoT** (text plus images or video).",
+        "Rule: **CoT = internal reasoning** (summarise an article, brainstorm); **ReAct = external interaction** (find a nearby restaurant, search papers). They can be combined."
+      ]
+    },
+    "5.8": {
+      "gist": "Tools as the bridge between an agent and the real world: the four tool types and how the reasoning loop uses them.",
+      "points": [
+        "A model plus reasoning logic can't act in the real world by itself; **tools are the bridge**, broadening tasks and improving accuracy and reliability.",
+        "**Extensions** connect to external APIs in a standardised way; **functions** define specific actions the reasoning system picks (e.g. calculate_price).",
+        "**Data stores** give access to information (real-time, historical, knowledge bases); **plugins** add new skills or integrations (e.g. calendar, payment gateway).",
+        "Tool cycle: reasoning (**tool selection**) → acting (**tool execution**) → **observation** (tool output) → iteration until the task is done."
+      ]
+    },
+    "5.9": {
+      "gist": "Google Cloud services and pre-built AI APIs that agents can use as tools, and orchestrating them for multi-step tasks.",
+      "points": [
+        "**Cloud Storage** (object storage), databases (Cloud SQL, Spanner, Firestore), **Cloud Run functions** (exam: Cloud Functions; serverless, auto-scale), **Cloud Run** (stateless containers for complex tools).",
+        "Many Google Cloud tools work even if agent logic is built outside Google Cloud; on **Agent Platform**, agents can use other agents as tools.",
+        "Pre-built AI APIs: Speech-to-Text, Text-to-Speech, Translation, Document Translation, **Document AI** (data extraction), **Cloud Vision** (OCR), Cloud Video Intelligence, **Natural Language** (sentiment, entities).",
+        "Example: a meeting location planner orchestrates **Document AI** (extract addresses) and the **Google Maps API** (analyse locations) to recommend a venue."
+      ]
+    },
+    "5.10": {
+      "gist": "Moving from a prototype to an application: credentials, where to run agent code, no-code/low-code options and multi-agent applications.",
+      "points": [
+        "Credentials: Google AI Studio → generate an **API key**; Agent Studio → set up **authentication and authorisation** in Google Cloud.",
+        "Run it on **Cloud Run functions** (event-triggered code, no servers to manage), **Cloud Run** (apps in containers) or anything that can make HTTP requests.",
+        "No-code/low-code: **Apps Script** automates Google Workspace (Workspace add-ons with the Gemini API); **AppSheet** is a no-code platform for custom business apps.",
+        "**Multi-agent** apps combine specialised agents (modular: efficiency, flexibility, scalability); an agent can be a tool of another, e.g. sentiment-analysis agent for customer service."
+      ]
+    },
+    "5.11": {
+      "gist": "Why RAG was needed (models as static knowledge bases) and how it works with tools: retrieval, augmentation, generation, plus data store options.",
+      "points": [
+        "Steps: **retrieval** (find relevant documents) → **augmentation** (add context to the prompt) → **generation** (answer, can cite sources) → optional iteration.",
+        "Retrieval tools: data stores, **vector databases** (match query **embeddings** to semantically similar content), search engines, **knowledge graphs** (entities and relationships).",
+        "Data stores in AI Applications: websites, **structured data** (tables, JSON; structure auto-detected or defined) and **unstructured data** (HTML, PDF, DOCX).",
+        "Exam guide offers **pre-built RAG with Agent Search** (managed, fastest) or **RAG APIs** (custom pipeline, more control)."
+      ]
+    },
+    "5.12": {
+      "gist": "Lab in Google AI Studio: comparing a time-sensitive prompt with and without Grounding using Google Search.",
+      "points": [
+        "Select Gemini 2.5 Flash in **Run settings** and run a time-sensitive prompt (e.g. latest trends in generative AI).",
+        "Then toggle **Grounding using Google Search** under Run settings → Tools and rerun the same prompt.",
+        "The grounded answer should be more current and relevant, with sources.",
+        "**Grounding with Google Search** is RAG on real-time web data: more accurate and up to date than training data alone."
+      ]
+    },
+    "5.13": {
+      "gist": "Agent Search, which combines information retrieval, natural language processing and LLMs: its search and recommendation solutions, grounding approach and enterprise features.",
+      "points": [
+        "Search solutions: general (public website; BigQuery, Cloud Storage), **document search**, **media search**, healthcare search and **search for commerce** (retail catalogue).",
+        "**Recommendation solutions**: general, media and retail (from browsing history, purchase data, product attributes).",
+        "Agent Search grounds LLM answers in **first-party data**, curated third-party data and Google's knowledge graph (**Grounding with Google Search**); a **RAG** approach minimising hallucinations.",
+        "Extra gen AI features: **search summaries** and **answers and follow-ups**; enterprise features: granular access controls, advanced analytics, scalable infrastructure, APIs and SDKs."
+      ]
+    },
+    "5.14": {
+      "gist": "Use case: a clothing retailer used Agent Search for commerce so online search understands shopper intent like a store associate.",
+      "points": [
+        "Problem: **keyword search** missed intent, since shoppers use vague words and describe visual traits, so they abandoned searches.",
+        "**Semantic understanding** handles synonyms, related terms and misspellings.",
+        "**AI-powered image search** returns visually similar items from an uploaded photo; it helps customers find products they couldn't describe in words.",
+        "**Retail recommendations** personalise suggestions from purchases, browsing and queries; results: more purchases, more loyal customers, more time on site."
+      ]
+    },
+    "5.15": {
+      "gist": "Gemini Enterprise for CX: an agentic solution bringing shopping and customer service together, with its components and CX Agent Studio build approaches.",
+      "points": [
+        "Components: **CX agents** (exam: Conversational Agents), **Agent Assist** for live human agents, **CX Insights** (exam: Conversational Insights), all built on CCaaS.",
+        "**CX Agent Studio** build approaches: **deterministic** (rule-based, maximum predictability), **generative** (Gemini, natural-language prompting, little or no code), hybrid (deterministic control for compliance plus generative flexibility).",
+        "**Agent Assist** helps human agents with recommended responses, knowledge-base suggestions, real-time transcription and translation, summaries and real-time coaching.",
+        "**CX Insights** analyses sentiment, entities and call topics (with **Generative FAQ** to find FAQ gaps); **CCaaS** gives omnichannel, CRM-integrated contact-centre infrastructure."
+      ]
+    },
+    "5.16": {
+      "gist": "Use case: fictitious Cymbal Taxes built an Agentic Tax Assistant with CX Agent Studio to handle high tax-season inquiry volume 24/7.",
+      "points": [
+        "Problem: keeping up with the **volume of inquiries in tax season**, needing instant, personalised, 24/7 support.",
+        "Built with **CX Agent Studio** (exam: Conversational Agents) using **natural-language instructions** plus a **data store tool** (tax laws, FAQs, customer data).",
+        "The assistant answers tax-form questions, gives **personalised advice**, helps with filing and payment, and asks clarifying questions before confirming eligibility.",
+        "Lesson: CX agents combining **generative playbooks** with company **data stores** give accurate, instant answers; staff refocus on complex work (audits, complaints)."
+      ]
+    },
+    "5.17": {
+      "gist": "Building an agent: agent instructions in CX Agent Studio, and a Google AI Studio lab creating a Cymbal Manufacturing chatbot via metaprompting.",
+      "points": [
+        "In **CX Agent Studio**, **agent instructions** define the goal, how the agent should act and rules; you add tools such as data stores, then test.",
+        "**System instructions** give context, persona and constraints before any user input, bringing consistency, accuracy, relevance and safety.",
+        "**Metaprompting**: prompts that guide AI to generate, modify or interpret other prompts; here an \"Agent instruction writer\" generated the chatbot's system prompt.",
+        "AI Studio was used only for accessibility; CX Agent Studio is normally recommended for customer chatbots and production-grade agents (e.g. **adversarial defence**)."
+      ]
+    },
+    "5.18": {
+      "gist": "Gemini Enterprise app: the launch point for enterprise-ready expert agents that help internal knowledge workers find information and automate tasks.",
+      "points": [
+        "Connects: **Gemini Notebook Enterprise**, **multimodal search agents** (Google Drive, Confluence, Jira, ServiceNow), gen AI assistants acting through **connectors**, and custom agents from CX Agent Studio.",
+        "Notebook vs app: Gemini Notebook Enterprise deep-dives only your uploaded sources; the **Gemini Enterprise app** spans all connected business systems and automates tasks.",
+        "Wealth-advisor use case: deep research limits sources to trusted repositories, the advisor verifies the agent's **research plan**; output: a sourced report plus **audio summary**.",
+        "Exam guide capabilities: **Gemini Notebook API** (programmatic notebook access), **multimodal search** and **custom agent** capabilities."
+      ]
+    },
+    "5.19": {
+      "gist": "Planning ahead for gen AI transformation: six steps to plan integration, how to measure impact, and how to plan for change.",
+      "points": [
+        "Six steps: **establish a clear vision**, **prioritise high-impact use cases**, invest in capabilities, drive organisational change, measure and demonstrate value, **champion responsible AI**.",
+        "Vision needs leadership buy-in and a champion; prioritise use cases by **technical feasibility**, **data readiness** and **transformation potential**.",
+        "Measure impact: **define key metrics** (e.g. **ROI** = financial benefits vs costs), collect and analyse data, then **iterate and improve** (fine-tune models, improve prompting).",
+        "**Plan for change**: regularly review and refine strategy, stay informed, engage the gen AI community, invest in training, attract and retain top talent."
+      ]
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "course": {
+    "id": "2",
+    "oneline": "How AI, ML, deep learning and gen AI relate; data quality; ML approaches and lifecycle tools; model choice; fixing foundation model limitations; secure and responsible AI.",
+    "key": [
+      {
+        "t": "AI ⊃ ML ⊃ deep learning",
+        "d": "**ML** is a subset of AI that learns from data. **Deep learning** uses multi-layer neural networks. **Generative AI** applies deep-learning **foundation models** to create new content, unlike traditional AI that predicts or classifies."
+      },
+      {
+        "t": "Data quality and accessibility",
+        "d": "Quality: accuracy, completeness, representative, consistency, relevance. **Data accessibility**: availability, cost, format. **Structured** data fits rows and columns; **unstructured** covers text, images, audio, video."
+      },
+      {
+        "t": "Three ML approaches",
+        "d": "**Supervised** learns from **labeled** data. **Unsupervised** finds groupings in **unlabeled** data. **Reinforcement** learns by trial and error with rewards and penalties. Choice depends on the task and available data."
+      },
+      {
+        "t": "ML lifecycle on Google Cloud",
+        "d": "Gather (**Pub/Sub**, Cloud Storage, Cloud SQL, Spanner) → prepare (**BigQuery**, Data Catalog) → train and deploy (**Agent Platform**) → manage (Feature Store, Pipelines, versioning, drift monitoring)."
+      },
+      {
+        "t": "Choosing a foundation model",
+        "d": "Eight factors: **modality**, **context window**, security, availability, cost, performance, fine-tuning, integration. Bigger isn't always better. **Agent Platform** offers Gemini, Gemma, Nano Banana, Veo and third-party models."
+      },
+      {
+        "t": "Six foundation model limitations",
+        "d": "**Data dependency**, **knowledge cutoff**, bias, fairness, **hallucinations**, edge cases. Models don't auto-update and can't verify against external sources."
+      },
+      {
+        "t": "Overcoming limitations",
+        "d": "**Grounding** ties output to verifiable sources; **RAG** is a technique for it. **Prompt engineering** is fastest; **fine-tuning** adjusts parameters with task-specific data; **humans in the loop** for high stakes."
+      },
+      {
+        "t": "Secure vs responsible AI",
+        "d": "**Secure AI** prevents intentional harm (data poisoning, model theft, adversarial attacks), guided by **SAIF**. **Responsible AI** covers intentional and unintentional harm: transparency, privacy, fairness, accountability, legal."
+      }
+    ],
+    "watch": [
+      "**Secure AI** = intentional harm only; **Responsible AI** = intentional and unintentional harm, and is built on security.",
+      "Fresh or proprietary facts → RAG/grounding; consistent style, format or task behaviour → **fine-tuning** (no fresh facts, no citations).",
+      "**Model Registry** manages your own model versions; **Model Garden** is for discovering, customising and deploying available models.",
+      "Exam guide names **Imagen** (text-to-image diffusion), not Nano Banana; **prompt tuning** differs from prompt engineering."
+    ]
+  },
+  "lessons": {
+    "2.1": {
+      "gist": "Course introduction: AI is not new, but gen AI exploded around 2022; sets out the four questions the course answers.",
+      "points": [
+        "**AI** means machines doing tasks that typically need human intelligence; it already sits in newsfeeds, voice assistants, recommendations and autocomplete.",
+        "Two drivers of the gen AI explosion: far more capable **LLMs** and widely available **computing power** built for AI.",
+        "Course questions: the difference between **AI, ML and gen AI**; how data types, data requirements and ML approaches enable gen AI.",
+        "Also: Google Cloud strategies for **foundation model limitations**, and key challenges for **responsible and secure AI** in an organisation."
+      ]
+    },
+    "2.2": {
+      "gist": "Defines AI, ML and generative AI, what a model is, and how traditional (predictive) AI differs from gen AI.",
+      "points": [
+        "**AI** is the broad field; **machine learning** is a subset that learns from data; **generative AI** is an application or subset that creates new content.",
+        "A **model** is essentially the math: input in, output out. It is built from data, so different data creates different models.",
+        "**Traditional AI** predicts or classifies (spam or not spam); gen AI learns **patterns and structures** and generates new, similar content.",
+        "Painting analogy: traditional AI learns to judge paintings; gen AI creates a new one. Gen AI needs **very large amounts of data**."
+      ]
+    },
+    "2.3": {
+      "gist": "Why data is the foundation of ML, and the eight factors of data quality and data accessibility.",
+      "points": [
+        "ML models analyse data, identify patterns, then use **probability** to calculate the likelihood of outcomes; only **relevant inputs** matter.",
+        "Five **data quality** factors: accuracy, completeness, representative, consistency, relevance. Non-representative data gives skewed samples and **biased** outcomes.",
+        "**Data accessibility** means needed data is readily available, usable and high quality. Its three factors: availability, cost, format.",
+        "Availability: data may not exist, sit behind **paywalls** or be restricted for privacy. Cost burdens smaller organisations. Format conversion can be slow."
+      ]
+    },
+    "2.4": {
+      "gist": "Distinguishes structured from unstructured data, using fictitious Cymbal Cleaning order data and knowledge-check examples.",
+      "points": [
+        "**Structured** data follows a predefined format (rows and columns), is easy to search, and often lives in a **relational database**.",
+        "**Unstructured** data has no predefined structure: text (PDFs, emails), images, audio, video. It needs more sophisticated analysis.",
+        "Cymbal Cleaning: IDs, dates, cost, address and star rating are structured; product image, **free-form feedback** and email content are unstructured.",
+        "Performance depends on data **type, volume, organisation and structure**; understanding your data is the first step of any AI implementation."
+      ]
+    },
+    "2.5": {
+      "gist": "The three primary ML approaches (supervised, unsupervised, reinforcement) and which Google Cloud product illustrates each.",
+      "points": [
+        "**Supervised** learning uses **labeled** data, each input paired with its correct output: house price prediction, spam filter.",
+        "**Unsupervised** learning finds natural groupings in **unlabeled** data: exploratory analysis, customer segmentation, **topic modelling**.",
+        "**Reinforcement** learning works by trial and error, maximising rewards and minimising penalties; suits cases without explicit instructions or labeled data.",
+        "Mapping: predictive maintenance → **Agent Platform** (supervised); anomaly detection → **BigQuery ML** (unsupervised); product recommendations → Agent Platform (reinforcement)."
+      ]
+    },
+    "2.6": {
+      "gist": "The five-stage ML lifecycle (gather, prepare, train, deploy, manage) and the Google Cloud tools that serve each stage.",
+      "points": [
+        "Gather: **Pub/Sub** for real-time streaming, **Cloud Storage** for unstructured data, **Cloud SQL** and Spanner for structured data.",
+        "Prepare: **BigQuery** to clean and analyse; **Data Catalog** for governance and dataset discovery (replaced by Knowledge Catalog).",
+        "Train and deploy: **Agent Platform** offers managed training, prebuilt containers, custom training jobs, model evaluation, and scales predictions to demand.",
+        "Manage: versioning, performance tracking, **drift monitoring**, **Feature Store**, **Pipelines**. Precisely: Model Registry manages your versions; Model Garden offers available models."
+      ]
+    },
+    "2.7": {
+      "gist": "How deep learning, foundation models and generative AI nest inside ML, and the two main foundation model types.",
+      "points": [
+        "**Deep learning** uses multi-layer **artificial neural networks**; via **semi-supervised learning** it trains on little labeled plus much unlabeled data.",
+        "**Foundation models** are built on deep learning, trained at massive scale, often on unlabeled data, and handle varied tasks across domains.",
+        "**LLMs** understand and generate human language (e.g. Gemini); **diffusion models** iteratively refine noise into images, audio or video.",
+        "Exam guide also asks: **multimodal foundation models** combine several data types; **natural language processing** understands and generates human language."
+      ]
+    },
+    "2.8": {
+      "gist": "The eight factors for choosing a gen AI model and the Google models available through Agent Platform.",
+      "points": [
+        "Eight factors: **modality**, **context window**, security, availability and reliability, cost, performance, fine-tuning and customisation, ease of integration.",
+        "A larger context window improves coherence on long tasks but raises compute cost. Bigger isn't always better; **multimodal** isn't always needed.",
+        "**Agent Platform** gives access to Google, proprietary third-party and openly available models, streamlining discovery, deployment and customisation.",
+        "**Gemini**: multimodal. **Gemma**: lightweight open models, local deployments. Nano Banana: images. **Veo**: video. The exam guide names **Imagen** (text-to-image diffusion)."
+      ]
+    },
+    "2.9": {
+      "gist": "Introduces grounding as a reality check against hallucinations, and lists the six foundation model limitations.",
+      "points": [
+        "**Grounding** ties a model's answers to specific sources, including the company's own data, for accurate, relevant, tailored answers.",
+        "Six limitations: **data dependency**, **knowledge cutoff** (last training date; no auto-update), bias, fairness, hallucinations, edge cases.",
+        "**Bias** comes from unbalanced datasets and can be amplified; **fairness** is hard to define, and assessments cover only specific bias categories.",
+        "**Hallucinations** sound convincing but are wrong because models can't verify against external sources; **edge cases** are rare scenarios exposing weaknesses."
+      ]
+    },
+    "2.10": {
+      "gist": "Five techniques to overcome foundation model limitations: grounding, RAG, prompt engineering, fine-tuning and humans in the loop.",
+      "points": [
+        "**Grounding** connects output to verifiable sources (enterprise data or Google Search), reducing hallucinations; **citations and confidence scores** build trust.",
+        "**RAG** is a specific grounding technique: retrieval (semantic index), augmentation (added to the prompt), generation (plus existing knowledge).",
+        "**Prompt engineering** is fastest but bounded by existing knowledge; **fine-tuning** further trains on task-specific data, adjusting the model's parameters.",
+        "**Humans in the loop** for content moderation, sensitive or high-risk decisions, pre- and post-generation review. Rule: fresh facts → RAG; style/format → fine-tuning."
+      ]
+    },
+    "2.11": {
+      "gist": "Secure AI: protecting AI systems from malicious attacks and misuse across the ML lifecycle, with SAIF and Google Cloud security tools.",
+      "points": [
+        "**Secure AI** prevents intentional harm; responsible AI covers intentional and unintentional harm. Security spans the full lifecycle, development to deployment.",
+        "Threats: **data poisoning** (manipulated training data), **model theft**, **adversarial attacks** (misleading inputs). Defences: access controls, anomaly detection, input filtering, output screening.",
+        "**SAIF** (Secure AI Framework): Google's AI/ML model risk management approach to find and stop threats, strengthen defences, stay secure by default.",
+        "Tools: **IAM** for access control; **Security Command Center** for a centralised view of security posture; GTIG and **Mandiant** for threat research."
+      ]
+    },
+    "2.12": {
+      "gist": "Responsible AI: avoiding intentional and unintentional harm, built on security, through transparency, privacy, fairness, accountability and legal compliance.",
+      "points": [
+        "**Responsible AI** avoids intentional and unintentional harm and is built on security, like a house needing a solid foundation.",
+        "**Transparency**: users understand how their data is used and how the AI works. **Privacy**: **anonymise or pseudonymise** data; models can leak training data.",
+        "AI can amplify **societal biases** from biased training data, developers or deployment environments (e.g. resume screening). **Fairness must be a core principle.**",
+        "**Explainable AI** (tool: **Vertex Explainable AI**) supports accountability. Legal areas: data privacy, non-discrimination, intellectual property, product liability."
+      ]
+    }
+  }
+}

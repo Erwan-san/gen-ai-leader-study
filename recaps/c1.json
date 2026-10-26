@@ -1,0 +1,155 @@
+{
+ "course": {
+  "id": "1",
+  "oneline": "Gen AI as a technology, not just a chatbot: its four uses, foundation models, Google Cloud's ecosystem, strategy and human roles. Core exam vocabulary and decision rules.",
+  "key": [
+   {
+    "t": "Technology, model, application",
+    "d": "**Generative AI** creates new content and ideas. It is a **technology** integrated into applications, not an application itself. **Gemini** is a model; the **Gemini app** is one application built on it."
+   },
+   {
+    "t": "Create / Summarize / Discover / Automate",
+    "d": "**Create**: generate new content; **Summarize**: condense large amounts of information. **Discover**: find information at the right time; **Automate**: do tasks that previously needed humans."
+   },
+   {
+    "t": "Multimodal gen AI",
+    "d": "**Multimodal gen AI** processes and integrates several formats (plain text, images, video, audio, PDFs), either individually or combined at the same time."
+   },
+   {
+    "t": "Foundation models vs traditional models",
+    "d": "**Foundation models** are large, trained on diverse data and adaptable to many downstream tasks; traditional models serve a **single purpose**. **LLMs** are a specialised type of foundation model focused on language."
+   },
+   {
+    "t": "Agent Platform for custom gen AI",
+    "d": "**Agent Platform** (exam: Vertex AI) is Google Cloud's unified ML platform to build, train, tune and deploy models, with model access via **Model Garden**. **Agent Search** adds managed multimodal search."
+   },
+   {
+    "t": "Five Google ecosystem pillars",
+    "d": "Individual productivity, continuous improvement, **Responsible AI** (SAIF, Mandiant), **enterprise ready** (ISO 27001, SOC 2, HIPAA) and **open approach** (TensorFlow, PyTorch, no lock-in)."
+   },
+   {
+    "t": "Top-down AND bottom-up strategy",
+    "d": "Combine **top-down** (executives: vision, sponsorship, resources, ethical guidelines) with **bottom-up** (managers and ICs: find use cases in daily workflows, experiment). Prioritise feasible, actionable, affordable, high-value use cases; start **low-risk**."
+   },
+   {
+    "t": "Augment, automate, keep humans in",
+    "d": "**Augment** strategic thinking and creativity; **automate** repetitive, rule-based or time-consuming tasks. **Humans-in-the-loop** remain needed: data preparation, prompt design, output evaluation, continuous monitoring."
+   }
+  ],
+  "watch": [
+   "Gen AI is a **technology**, Gemini is a **model**, the Gemini app is an **application**. Don't conflate them.",
+   "All **LLMs** are foundation models, but not every foundation model is an LLM.",
+   "A **decision tree** or **linear regression** is a narrow, single-task model, not a foundation model.",
+   "\"Who should…?\" Executives set vision, funding, ethical guidelines; managers and ICs identify use cases and experiment."
+  ]
+ },
+ "lessons": {
+  "1.1": {
+   "gist": "Course introduction: the learning path toward the Google Cloud Generative AI Leader certification and the four questions Course 1 answers.",
+   "points": [
+    "The path prepares for the **Google Cloud Generative AI Leader** certification; it suits all roles and **no technical experience is required**.",
+    "The business gap is mostly **non-technical**: knowing what gen AI can be used for, getting **buy-in**, and communicating across technical and non-technical teams.",
+    "Course 1 introduces gen AI, its business capabilities and how to plan a gen AI strategy; later courses cover terminology, landscape, apps and agents.",
+    "Four questions: what gen AI is and its uses, how it transforms businesses, how **Google Cloud** supports the journey, which strategies make implementation succeed."
+   ]
+  },
+  "1.2": {
+   "gist": "What generative AI is, why it is more than a chatbot, the four primary business uses with Google tools, and multimodal gen AI.",
+   "points": [
+    "**Generative AI** creates new content and ideas; it is a technology integrated into applications. **Gemini** is a model; the **Gemini app** is one application.",
+    "Four uses. **Create**: generate new content; **Summarize**: condense information. **Discover**: find information at the right time; **Automate**: do tasks that previously needed humans.",
+    "Example tools: Create, **Gemini Code Assist**, Nano Banana; Summarize, **Gemini Notebook Enterprise**; Discover, **Agent Search**, Gemini Enterprise; Automate, Document AI, Codey.",
+    "**Multimodal gen AI** processes and integrates several formats (text, images, video, audio, PDFs), individually or combined at the same time."
+   ]
+  },
+  "1.3": {
+   "gist": "Agent Platform as Google Cloud's platform for custom gen AI, illustrated by a multimodal automotive virtual assistant built with Gemini and Agent Search.",
+   "points": [
+    "**Agent Platform** (exam: Vertex AI) is Google Cloud's **unified machine learning (ML) platform** to build, train and deploy ML models and AI applications.",
+    "**Model Garden** gives access to Google's gen AI models across modalities; you can **tune** Google's LLMs, then deploy them in AI-powered apps.",
+    "Automotive assistant: **Gemini** understands drivers' questions and runs interactive problem solving; **Agent Search** provides intelligent knowledge retrieval over multimodal sources (manuals, FAQs, videos).",
+    "**Agent Search** is fully managed, scalable search for apps. The assistant's three benefits: reduced support costs, improved efficiency, enhanced accessibility."
+   ]
+  },
+  "1.4": {
+   "gist": "Foundation models: how they differ from traditional AI models, their key features, how LLMs relate to them, and example Google models.",
+   "points": [
+    "AI: systems doing tasks needing human intelligence. **Machine learning**: systems learning from data. **Foundation models**: large, trained on enormous datasets, adaptable to downstream tasks.",
+    "Three key features: trained on **diverse data**, **flexible** (one model, many use cases), **adaptable** (specialised through additional, targeted training).",
+    "Traditional models serve a **single purpose** (e.g. spam filter, decision tree, linear regression). All **LLMs** are foundation models; not all foundation models are LLMs.",
+    "**Gemini**: massive multimodal data. **Nano Banana**: mainly images and text, for text-to-image generation and editing. **Chirp**: audio in many languages, for speech recognition."
+   ]
+  },
+  "1.5": {
+   "gist": "Morrisons' Product Finder shows a pre-trained model plus enterprise data delivering an in-store product search quickly with a small team.",
+   "points": [
+    "Morrisons built **Product Finder**, an in-app AI tool giving shoppers a product's aisle and precise in-store location in real time.",
+    "Stack: **BigQuery** holds product and location data; **Gemini** models with Agent Platform translate free-text queries into product and location IDs.",
+    "**Pre-trained model** benefit: test how the model behaves in your environment, rather than exhaustively testing the model itself.",
+    "A **small team** moved faster from proof-of-concept to value. Exam pattern: a **pre-trained model** plus your own **enterprise data** (BigQuery) delivers value quickly."
+   ]
+  },
+  "1.6": {
+   "gist": "Prompts are the inputs to foundation models, and prompting is a key skill for getting value from gen AI.",
+   "points": [
+    "Foundation models take inputs called **prompts** and produce **outputs** (e.g. a question gives an answer; sample code with errors gives corrected code).",
+    "Many AI models have **strict input requirements**; foundation models, especially **multimodal** ones, accept a much broader set of inputs.",
+    "**Prompting** = **prompt engineering** = **prompt design**: \"an art and a science\", and one of the most important skills for gen AI value."
+   ]
+  },
+  "1.7": {
+   "gist": "Hands-on prompting in the Gemini app, and matching the right input type to a desired output.",
+   "points": [
+    "In the **Gemini app** (gemini.google.com) you type a prompt in the bottom text box, like a conversation with an assistant.",
+    "Practice mapped to uses: **Create** website text, **Summarize** a long document or email, **Discover** by researching a topic.",
+    "Input types: a **text description** yields an image or workout plan; a **code snippet**, a fixed script; an **audio file**, a call summary.",
+    "Prompting is a skill built through **practice and experimentation**."
+   ]
+  },
+  "1.8": {
+   "gist": "Why Google is an AI-first company and the five ways businesses can leverage Google Cloud's gen AI ecosystem.",
+   "points": [
+    "**Google Cloud** lets businesses build on Google's foundation and use gen AI without years of investment or managing the underlying infrastructure.",
+    "Five pillars: **individual productivity** and efficiency, **continuous improvement** (automatic model upgrades, new features, security patches), responsible AI, enterprise ready, open approach.",
+    "**Responsible AI**: SAIF, Mandiant, AI Principles, Responsible AI Toolkit. **Enterprise ready**: Agent Platform, ISO 27001, SOC 2, HIPAA. **Open approach**: TensorFlow, PyTorch, open standards.",
+    "Most successful implementations have a **clear vision**, focus on **impactful use cases**, and **tracked results**; no technical expertise is needed."
+   ]
+  },
+  "1.9": {
+   "gist": "How to build a gen AI strategy: combine top-down and bottom-up approaches, with distinct roles for executives and for managers and ICs.",
+   "points": [
+    "Use a two-fold approach: **top-down** sets an AI vision aligned with strategic business priorities; **bottom-up** surfaces ideas from those closest to the problem.",
+    "Executives: **executive sponsorship**, clear vision, funding and resources, ethical guidelines. Mid-level managers and ICs: identify use cases in daily workflows, experiment with tools.",
+    "Six areas at both levels: strategic focus, exploration, responsible AI, resourcing, impact (**KPIs**), continuous improvement. Prioritise **feasible, actionable, affordable**, high-value use cases; start **low-risk**.",
+    "Data governance tools: **Google Cloud Data Loss Prevention** (discover, classify, de-identify data), **Cloud Key Management Service** (encryption keys), **Google SecOps** (detect and respond to threats)."
+   ]
+  },
+  "1.10": {
+   "gist": "The creative matrix: a team method to generate and prioritise gen AI use cases by crossing gen AI capabilities with business priorities.",
+   "points": [
+    "Draw two flexible axes: **gen AI options** (by product or modality) and business-specific items (personas, workflows or strategic goals).",
+    "Team members write **sticky notes** with ideas at each intersection, then score each idea for **impact** and **feasibility** (work needed to build).",
+    "Example (faux floral business): Agent Search for photo-based search of similar arrangements; Agent Conversation for a support chatbot; Agent Studio to **fine-tune** a demand-prediction model.",
+    "You may use the Gemini app to help brainstorm, but **validate all ideas**."
+   ]
+  },
+  "1.11": {
+   "gist": "Keeping humans central: shift human responsibility from task execution to strategic thinking, using gen AI for augmentation and automation.",
+   "points": [
+    "**Augmentation**: gen AI supports critical thinking, creativity, relationship building and strategic planning; humans interpret, decide, innovate, build trust and set vision.",
+    "**Automation**: gen AI takes over repetitive, rule-based tasks (data entry, content formatting) and time-consuming ones (research, summarisation, first drafts).",
+    "**Humans-in-the-loop** are still needed: data selection and preparation, prompt design and refinement, output evaluation and refinement, continuous monitoring and feedback.",
+    "Test: a pricing FAQ chatbot or catalogue product descriptions = automation; an analyst drafting trend reports, then advising clients = augmentation."
+   ]
+  },
+  "1.12": {
+   "gist": "Warner Bros. Discovery's Caption AI shows a hybrid, human-in-the-loop captioning workflow built on Google Cloud, and closes Course 1.",
+   "points": [
+    "Content data used only for distribution and viewing becomes a **data asset for ML**, enabling **Caption AI** for more efficient captioning.",
+    "**Human-in-the-loop** workflow: Caption AI delivers a time-coded, formatted caption file; a human verifies the words and sync, then edits.",
+    "Agent Platform is **model-agnostic**: beyond Google's own models, it lets teams experiment to find the best model for each use case.",
+    "Module wrap-up: gen AI solutions **always involve humans** (employees using tools, customers using chatbots), so keep humans in the process."
+   ]
+  }
+ }
+}

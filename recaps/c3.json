@@ -1,0 +1,165 @@
+{
+  "course": {
+    "id": "3",
+    "oneline": "The five layers of gen AI and Google Cloud's options at each, and how to choose and maintain solutions; exam questions test layer roles and which tool fits which need.",
+    "key": [
+      {
+        "t": "The five layers",
+        "d": "Top to bottom: **Gen AI powered applications** are the user-facing frontend. **Agents** take autonomous action. The **platform** is the glue. **Models** are the brain. **Infrastructure** is the foundation (servers, GPUs, TPUs)."
+      },
+      {
+        "t": "Agents: model, reasoning loop, tools",
+        "d": "A **gen AI agent** is an application that tries to achieve a goal by observing the world and acting upon it with **tools**. **Reasoning loop**: Observe, Interpret, Plan, Act, repeated until goal or stopping point."
+      },
+      {
+        "t": "Conversational vs workflow agents",
+        "d": "**Conversational agents** hold dialogue with users, inferring **intent** and calling tools if needed. **Workflow agents** automate multi-step tasks: you define a task or trigger a process, and they execute actions via **APIs**."
+      },
+      {
+        "t": "Agent Platform and MLOps",
+        "d": "**Agent Platform** (exam: Vertex AI) is the unified ML platform to build, deploy and manage ML and gen AI. MLOps tools: **Feature Store**, **Model Registry**, Model Evaluation, Agent Platform Pipelines, **Model Monitoring**."
+      },
+      {
+        "t": "Model Garden or build your own",
+        "d": "Most organisations don't need a new model: **Model Garden** lets you discover, customise and deploy Google, third-party and open-source models. To build: **custom training** (any framework) or **AutoML** (minimal technical knowledge)."
+      },
+      {
+        "t": "Infrastructure: compute, storage, networking",
+        "d": "Hardware and software to train, deploy and scale models: **GPUs** and **TPUs** (Google's custom AI chips) for parallel processing, **hypercomputers**, high-performance storage, and Google's high-bandwidth, low-latency global fiber network."
+      },
+      {
+        "t": "AI on the edge",
+        "d": "**Edge computing** runs AI close to the data source: real-time responsiveness, increased data privacy, less reliance on internet connectivity. Tools: **LiteRT** (on-device runtime) and **Gemini Nano**; Agent Platform still builds, trains and deploys."
+      },
+      {
+        "t": "Choosing: needs, resources, cost",
+        "d": "Assess **scale**, **customisation**, user interaction, privacy and resources (**time, people, budget**). Costs: training, deploying, using the model. Pre-built apps take seconds; fully custom solutions take months; plan maintenance from the start."
+      }
+    ],
+    "watch": [
+      "Course says agents 'independently set goals'; in practice an agent pursues a given goal, deciding its own steps and tools.",
+      "Model vs agent: generating or understanding content is a model; multi-step orchestration, personalisation over time and actions are an agent.",
+      "Specialised domains: fresh or proprietary **facts** → RAG/**grounding**; domain style, format or behaviour → **fine-tuning**.",
+      "Exam guide's AI-optimised infrastructure: **hypercomputer**, Google's custom-designed **TPUs**, **GPUs**, data centres, cloud computing."
+    ]
+  },
+  "lessons": {
+    "3.1": {
+      "gist": "Introduction to Course 3: why decision-makers need a high-level view of the gen AI landscape, and the questions the course answers.",
+      "points": [
+        "User-facing apps only **scratch the surface** of gen AI; you can **build a custom solution** or use **pre-existing tools** such as Google Cloud's.",
+        "Whether or not they are developers, decision-makers must understand **what's possible** to decide well.",
+        "Three questions: the **layers** of gen AI solutions, the **Google Cloud options** available, and when to choose one solution over another.",
+        "Covers the **gen AI landscape** at a high level, not technical detail; Courses 1 and 2 are recommended first."
+      ]
+    },
+    "3.2": {
+      "gist": "Presents the five layers gen AI is built on, from user-facing applications down to infrastructure, and the role of each.",
+      "points": [
+        "**Gen AI powered applications** are the user-facing **frontend**; **agents** take autonomous action, handling multi-step tasks a model alone can't.",
+        "An **agent** is software that learns how best to achieve a goal from its inputs and the tools available, deciding without constant human input.",
+        "The **platform** is the backbone or glue between agents and models, providing APIs, data management and model deployment tools while hiding infrastructure complexity.",
+        "**Models** are the agent's brain, trained on vast data; **infrastructure** is the foundation: servers, GPUs, TPUs and software to store and run models."
+      ]
+    },
+    "3.3": {
+      "gist": "Defines gen AI agents, what they add to applications, and how agents and applications split roles, including multi-agent systems.",
+      "points": [
+        "A **gen AI agent** is an application that tries to achieve a goal by observing the world and acting upon it using its **tools**.",
+        "Agents bring three things: **understanding and responding to natural language**, **automating complex tasks**, and **personalisation**.",
+        "Agents add intelligence and automation; **applications** provide the framework and purpose (UI, goals, tasks). A **multi-agent system** combines specialised agents in one app.",
+        "Use **pre-built** or **custom** agents; **AI Applications** (Google Cloud) creates agents with natural language instead of complex code."
+      ]
+    },
+    "3.4": {
+      "gist": "Explains the two categories of agents, conversational and workflow, their five-step flows, and six agent use-case families.",
+      "points": [
+        "**Conversational agents** understand what you mean, not just what you say: input → understand **intent** → call a tool if needed → generate → deliver.",
+        "**Workflow agents** automate tasks or complex processes: a task or trigger → interpret requirements → execute actions (often via **APIs**) → generate result → deliver it.",
+        "Six use-case families: customer service, employee productivity, creative, code, data and **security agents** (which can create **detection rules**).",
+        "Key distinction: **conversational** = dialogue with users; **workflow** = automating multi-step tasks. Automated research example: **Gemini Deep Research**."
+      ]
+    },
+    "3.5": {
+      "gist": "Shows what makes an agent more than a model: a reasoning loop plus tools, enabling multi-step work beyond text generation.",
+      "points": [
+        "Agents = **model + reasoning loop + tools**; they solve complex problems with **minimal human intervention** and manage multi-step tasks LLMs alone can't.",
+        "The **reasoning loop** (Observe, Interpret, Plan, Act) repeats until the goal or a stopping point; frameworks include **ReAct** and **chain-of-thought (CoT)**.",
+        "**Tools** are functions letting the agent interact with its environment: update inventory, schedule meetings, auto-order supplies, talk to a robot's sensors and actuators.",
+        "Rule of thumb: generating or understanding content = **model**; multi-step orchestration, personalisation over time or actions = **agent**."
+      ]
+    },
+    "3.6": {
+      "gist": "Covers the platform layer, the 'glue' of gen AI, through Agent Platform (exam: Vertex AI) and its MLOps tools.",
+      "points": [
+        "**Agent Platform** provides infrastructure, pre-trained models and tools to build, deploy and manage ML and gen AI, bringing pieces together easily and scalably.",
+        "Six features: open and flexible (**no vendor lock-in**), powerful infrastructure, pre-trained models, comprehensive tooling, customisation via **built-in IDE**, easy integration via **APIs**.",
+        "**MLOps** automates, standardises and manages the ML project lifecycle; Agent Platform adds fully managed compute, distributed training, hyperparameter optimisation and enterprise security.",
+        "**Feature Store** shares features; **Model Registry** manages versions; Model Evaluation compares models; Agent Platform Pipelines automate ML workflows; **Model Monitoring** detects degradation, skew and drift."
+      ]
+    },
+    "3.7": {
+      "gist": "Covers the model layer: using existing models from Model Garden versus building your own with custom training or AutoML on Agent Platform.",
+      "points": [
+        "Most organisations don't need a new model: **Model Garden** lets you discover, customise and deploy Google, third-party and open-source models.",
+        "First-party **foundation models**: Gemini, **Imagen** (text-to-image), **Veo** (text-to-video, image-to-video), Chirp 2.0 (speech-to-text); also pre-trained APIs, open models (Gemma 2) and third-party (Claude).",
+        "Build your own: **fully custom training** with any ML framework (PyTorch, TensorFlow…), or **AutoML** for image, video and tabular data with minimal technical knowledge.",
+        "Decision rule: ready, high-performing option on a moderate budget → **Model Garden**; full control of architecture and training → custom model on Agent Platform."
+      ]
+    },
+    "3.8": {
+      "gist": "Fictitious Cymbal Aerospace case: using Agent Platform AutoML and Gemini to extract and explain metadata from 3D CAD models of jet engine components.",
+      "points": [
+        "Problem: extracting material composition, dimensions, stress points and tolerances from **3D CAD models** was manual, slow and error-prone.",
+        "Layer 1: **Agent Platform AutoML** trains a specialised model to extract key metadata from CAD files, with no deep ML expertise needed.",
+        "Layer 2: **Gemini** within Agent Platform, integrated via MLOps tools such as **Agent Platform Pipelines**, turns raw metadata into natural-language summaries and answers.",
+        "Platform benefits: simplified model development, customised solutions on own data, efficient scaling, streamlined **serverless** deployment with Agent Platform handling MLOps."
+      ]
+    },
+    "3.9": {
+      "gist": "Covers the infrastructure layer: the hardware and software for compute, storage and networking needed to train, deploy and scale AI models.",
+      "points": [
+        "**GPUs** (originally graphics rendering) and **TPUs** (Google's custom AI-optimised chips) excel at **parallel processing**, crucial for training large neural networks.",
+        "A **hypercomputer** links many GPU/TPU nodes over high-speed networks into one massive supercomputer for the most demanding gen AI models.",
+        "Gen AI is **data hungry**: storage needs high throughput, scalability, reliability and durability, and fast access; Google's **global fiber network** gives high-bandwidth, low-latency links.",
+        "Without a platform handling it, infrastructure matters at every stage (data collection, training, refinement, deployment, monitoring); benefits: **scalability, performance, cost-effectiveness**."
+      ]
+    },
+    "3.10": {
+      "gist": "Covers edge computing: running AI on devices close to the data source, Google's edge tools, and when to choose edge over cloud.",
+      "points": [
+        "**Edge computing** runs AI closer to the data source or point of need: **real-time responsiveness**, increased data privacy, less reliance on internet connectivity.",
+        "**Gemini Nano**, Google's most efficient, compact model, runs on-device (privacy, speed, offline access), e.g. Pixel Call Notes; Android developers use the **AI Edge SDK**.",
+        "**Agent Platform** builds and refines models, then converts them to **LiteRT** (on-device runtime), packages them in containers, and manages and monitors edge deployments.",
+        "Edge for instant, on-device decisions (surgical device, self-driving car); cloud for scale or centralised analysis (high-volume chatbot, smart-city traffic)."
+      ]
+    },
+    "3.11": {
+      "gist": "Covers how to decide between existing and custom gen AI solutions by assessing needs and resources: people, cost and time.",
+      "points": [
+        "Assess **scale**, **customisation** (grounding or fine-tuning, or a new model?), interaction (latency, connectivity) and resources: time, people, budget.",
+        "**Business leaders** use pre-built solutions (Google Workspace with Gemini); **developers** build custom agents (AI Applications, pre-trained APIs, Agent Platform); **AI practitioners** customise and optimise models.",
+        "You pay for **training**, deploying and using models; pricing: **usage-based** (tokens or characters), subscription-based, licensing fees, free tiers.",
+        "Time: pre-built app, **seconds**; custom agent with AI Applications, much less than fully custom; fully custom solution with custom model, **months**."
+      ]
+    },
+    "3.12": {
+      "gist": "Lists the needs to assess before starting a gen AI solution: scale, customisation, user interaction, privacy, plus latency, connectivity, accuracy and explainability.",
+      "points": [
+        "**Scale**: small teams go far with **pre-built tools**; millions of customers need a robust, customised solution with scalability and security.",
+        "**Customisation**: start with existing models and **fine-tune**; for specialised domains, fresh or proprietary facts → **RAG/grounding**, domain style or behaviour → fine-tuning.",
+        "Also assess **privacy** (encryption, access controls, GDPR, HIPAA), **latency**, connectivity (offline → edge), accuracy and **explainability** (healthcare, finance).",
+        "Short on time, some coding skills, need text-to-image for a campaign → **pre-trained API**; fine-tuning costs time, building from scratch is wrong."
+      ]
+    },
+    "3.13": {
+      "gist": "Covers how to compare gen AI providers and models, and why maintenance must be planned from the start.",
+      "points": [
+        "Compare providers in four steps: evaluate capabilities with **benchmarks**, compare **pricing structures**, factor in additional costs (storage, API calls, fine-tuning), read the fine print.",
+        "Where to compare: provider pricing pages, research papers and independent benchmarks, community forums and discussions.",
+        "Maintenance is \"a journey, not a destination\": plan it from the start; **Google Cloud's fully managed environment** lets developers focus on agent development.",
+        "Maintenance areas: **model monitoring and retraining**, data updates, software updates and bug fixes, hardware and infrastructure (**capacity planning**), security and compliance."
+      ]
+    }
+  }
+}

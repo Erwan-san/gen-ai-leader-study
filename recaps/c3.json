@@ -21,7 +21,7 @@
       },
       {
         "t": "Model Garden or build your own",
-        "d": "Most organisations don't need a new model: **Model Garden** lets you discover, customise and deploy Google, third-party and open-source models. To build: **custom training** (any framework) or **AutoML** (minimal technical knowledge)."
+        "d": "For many use cases you don't need a new model: **Model Garden** lets you discover, customise and deploy Google, third-party and open-source models. To build: **custom training** (any framework) or **AutoML** (minimal technical knowledge)."
       },
       {
         "t": "Infrastructure: compute, storage, networking",
@@ -101,7 +101,7 @@
     "3.7": {
       "gist": "Covers the model layer: using existing models from Model Garden versus building your own with custom training or AutoML on Agent Platform.",
       "points": [
-        "Most organisations don't need a new model: **Model Garden** lets you discover, customise and deploy Google, third-party and open-source models.",
+        "For many use cases you don't need a new model: **Model Garden** lets you discover, customise and deploy Google, third-party and open-source models.",
         "First-party **foundation models**: Gemini, **Imagen** (text-to-image), **Veo** (text-to-video, image-to-video), Chirp 2.0 (speech-to-text); also pre-trained APIs, open models (Gemma 2) and third-party (Claude).",
         "Build your own: **fully custom training** with any ML framework (PyTorch, TensorFlow…), or **AutoML** for image, video and tabular data with minimal technical knowledge.",
         "Decision rule: ready, high-performing option on a moderate budget → **Model Garden**; full control of architecture and training → custom model on Agent Platform."
